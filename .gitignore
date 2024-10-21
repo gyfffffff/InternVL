@@ -169,3 +169,6 @@ internvl_chat/data/
 Husky2/*
 data_process/
 *distillation*
+
+internvl_chat/internvl_finetune/data/*
+*/pretrained/*

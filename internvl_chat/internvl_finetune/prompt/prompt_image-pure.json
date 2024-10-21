@@ -1,0 +1,139 @@
+{
+    "prompts": [
+        {
+            "id": 0,
+            "image-type": "image-pure",
+            "prompt": {
+                "cn": "该图片描述为\n",
+                "ar": "صف الصورة بـ\n",
+                "ru": "Описание изображения\n",
+                "th": "รายละเอียดของภาพ\n",
+                "ko": "이 이미지는\n",
+                "vi": "Hình ảnh này\n",
+                "hu": "A kép leírása\n",
+                "cs": "Popis obrázku\n",
+                "sr": "Опис слике\n"
+            }
+        },
+        {
+            "id": 1,
+            "image-type": "image-pure",
+            "prompt": {
+                "cn": "这张图片的描述是\n",
+                "ar": "وصف الصورة هو\n",
+                "ru": "Описание изображения\n",
+                "th": "รายละเอียดของภาพ\n",
+                "ko": "이 이미지는\n",
+                "vi": "Hình ảnh này\n",
+                "hu": "A kép leírása\n",
+                "cs": "Popis obrázku\n",
+                "sr": "Опис слике\n"
+            }
+        },
+        {
+            "id": 2,
+            "image-type": "image-pure",
+            "prompt": {
+                "cn": "请你描述这张图片\n",
+                "ar": "صف الصورة\n",
+                "ru": "Опишите это изображение\n",
+                "th": "อธิบายภาพนี้\n",
+                "ko": "이 이미지를 설명해주세요\n",
+                "vi": "Mô tả hình ảnh này\n",
+                "hu": "Kérlek írd le ezt a képet\n",
+                "cs": "Popište tento obrázek\n",
+                "sr": "Опишите ову слику\n"
+            }
+        },
+        {
+            "id": 3,
+            "image-type": "image-pure",
+            "prompt": {
+                "cn": "我是一个视障人士，请你为我讲述这张图片\n",
+                "ar": "أنا شخص مكفوف، يرجى وصف الصورة لي\n",
+                "ru": "Я слабовидящий, пожалуйста, опишите мне это изображение\n",
+                "th": "ฉันเป็นคนตาบอด โปรดอธิบายภาพนี้ให้ฉันฟัง",
+                "ko": "나는 시각장애인입니다. 이 이미지를 설명해주세요\n",
+                "vi": "Tôi là người mù, bạn có thể mô tả hình ảnh này không?\n",
+                "hu": "Vak vagyok, kérlek, mond el nekem ezt a képet\n",
+                "cs": "Jsem nevidomý, prosím, popište mi tento obrázek\n",
+                "sr": "Слепа сам, молим вас опишите ми ову слику\n"
+            }
+        },
+        {
+            "id": 4,
+            "image-type": "image-pure",
+            "prompt": {
+                "cn": "现在你是一个老师，请你为学生们讲解这张图片\n",
+                "ar": "أنت الآن معلم، يرجى شرح الصورة للطلاب\n",
+                "ru": "Теперь вы учитель, объясните эту картинку ученикам\n",
+                "th": "ตอนนี้คุณเป็นครู โปรดอธิบายภาพนี้ให้นักเรียน\n",
+                "ko": "당신은 선생님입니다. 학생들에게 이 이미지를 설명해주세요\n",
+                "vi": "Bây giờ bạn là một giáo viên, bạn có thể giải thích hình ảnh này không?\n",
+                "hu": "Most tanár vagy, kérlek, magyarázd el ezt a képet a diákoknak\n",
+                "cs": "Nyní jste učitel, prosím, vysvětlete tento obrázek studentům\n",
+                "sr": "Сада сте наставник, молим вас објасните ову слику ученицима\n"
+            }
+        },
+        {
+            "id": 5,
+            "image-type": "image-pure",
+            "prompt": {
+                "cn": "你是一个讲解员，请你为观众讲述这张图片\n",
+                "ar": "أنت مقدم البرنامج، يرجى شرح الصورة للجمهور\n",
+                "ru": "Вы комментатор, объясните эту картинку зрителям\n",
+                "th": "คุณเป็นผู้นำเสนอ โปรดอธิบายภาพนี้ให้ผู้ชม",
+                "ko": "당신은 해설자입니다. 관객들에게 이 이미지를 설명해주세요\n",
+                "vi": "Bạn là người hướng dẫn, bạn có thể giải thích hình ảnh này không?\n",
+                "hu": "Ön az előadó, kérlek, magyarázza el ezt a képet a nézőknek\n",
+                "cs": "Jste moderátor, prosím, vysvětlete tento obrázek divákům\n",
+                "sr": "Ви сте водитељ, молим вас објасните ову слику гледаоцима\n"
+            }
+        },
+        {
+            "id": 6,
+            "image-type": "image-pure",
+            "prompt": {
+                "cn": "请你为我讲解图片\n",
+                "ar": "يرجى شرح الصورة لي\n",
+                "ru": "Пожалуйста, объясните мне это изображение\n",
+                "th": "โปรดอธิบายภาพให้ฉันฟัง",
+                "ko": "이 이미지를 설명해주세요\n",
+                "vi": "Bạn có thể giải thích hình ảnh này không?\n",
+                "hu": "Kérlek, magyarázd el nekem ezt a képet\n",
+                "cs": "Prosím, vysvětlete mi tento obrázek\n",
+                "sr": "Молим вас објасните ми ову слику\n"
+            }
+        },
+        {
+            "id": 7,
+            "image-type": "image-pure",
+            "prompt": {
+                "cn": "请你为我讲述一张图片\n",
+                "ar": "يرجى شرح صورة لي\n",
+                "ru": "Пожалуйста, расскажите мне об изображении\n",
+                "th": "โปรดอธิบายภาพให้ฉันฟัง",
+                "ko": "이미지를 설명해주세요\n",
+                "vi": "Bạn có thể giải thích hình ảnh này không?\n",
+                "hu": "Kérlek, magyarázd el nekem ezt a képet\n",
+                "cs": "Prosím, vysvětlete mi tento obrázek\n",
+                "sr": "Молим вас објасните ми ову слику\n"
+            }
+        },
+        {
+            "id": 8,
+            "image-type": "image-pure",
+            "prompt": {
+                "cn": "描述这张图片\n",
+                "ar": "صف الصورة\n",
+                "ru": "Опишите это изображение\n",
+                "th": "อธิบายภาพนี้\n",
+                "ko": "이 이미지를 설명해주세요\n",
+                "vi": "Mô tả hình ảnh này\n",
+                "hu": "Írd le ezt a képet\n",
+                "cs": "Popište tento obrázek\n",
+                "sr": "Опишите ову слику\n"
+            }
+        }
+    ]
+}
