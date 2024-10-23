@@ -1,0 +1,9 @@
+{
+    "ar_image_text_pair_1": {
+        "root": "/ailab/public/gaoyufei/ar/image_text_pair",
+        "annotation": "/ailab/user/gaoyufei/InternVL/internvl_chat/internvl_finetune/data/ar/image_text_pair/processed_v001_part-666c3ce73bf5-000000.jsonl",
+        "data_augment": false,
+        "repeat_time": 1,
+        "length": 8310
+    }
+}

@@ -1,0 +1,194 @@
+Wed Oct 23 11:07:25 2024       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 550.78                 Driver Version: 550.78         CUDA Version: 12.4     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA GeForce RTX 4090        On  |   00000000:01:00.0 Off |                  Off |
+| 45%   30C    P8             15W /  450W |       1MiB /  24564MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+|   1  NVIDIA GeForce RTX 4090        On  |   00000000:25:00.0 Off |                  Off |
+| 45%   30C    P8             21W /  450W |       1MiB /  24564MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+|   2  NVIDIA GeForce RTX 4090        On  |   00000000:41:00.0 Off |                  Off |
+| 45%   29C    P8             17W /  450W |       1MiB /  24564MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+|   3  NVIDIA GeForce RTX 4090        On  |   00000000:61:00.0 Off |                  Off |
+| 44%   29C    P8             17W /  450W |       1MiB /  24564MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+|   4  NVIDIA GeForce RTX 4090        On  |   00000000:81:00.0 Off |                  Off |
+| 45%   29C    P8             25W /  450W |       1MiB /  24564MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+|   5  NVIDIA GeForce RTX 4090        On  |   00000000:A1:00.0 Off |                  Off |
+| 45%   29C    P8             20W /  450W |       1MiB /  24564MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+|   6  NVIDIA GeForce RTX 4090        On  |   00000000:C1:00.0 Off |                  Off |
+| 45%   30C    P8             27W /  450W |       1MiB /  24564MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+|   7  NVIDIA GeForce RTX 4090        On  |   00000000:E1:00.0 Off |                  Off |
+| 44%   29C    P8             22W /  450W |       1MiB /  24564MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+WARNING:torch.distributed.run:
+*****************************************
+Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+*****************************************
+The cache for model files in Transformers v4.22.0 has been updated. Migrating your old cache. This is a one-time only operation. You can interrupt this and resume the migration later on by calling `transformers.utils.move_cache()`.
+The cache for model files in Transformers v4.22.0 has been updated. Migrating your old cache. This is a one-time only operation. You can interrupt this and resume the migration later on by calling `transformers.utils.move_cache()`.
+The cache for model files in Transformers v4.22.0 has been updated. Migrating your old cache. This is a one-time only operation. You can interrupt this and resume the migration later on by calling `transformers.utils.move_cache()`.
+The cache for model files in Transformers v4.22.0 has been updated. Migrating your old cache. This is a one-time only operation. You can interrupt this and resume the migration later on by calling `transformers.utils.move_cache()`.
+The cache for model files in Transformers v4.22.0 has been updated. Migrating your old cache. This is a one-time only operation. You can interrupt this and resume the migration later on by calling `transformers.utils.move_cache()`.
+The cache for model files in Transformers v4.22.0 has been updated. Migrating your old cache. This is a one-time only operation. You can interrupt this and resume the migration later on by calling `transformers.utils.move_cache()`.
+The cache for model files in Transformers v4.22.0 has been updated. Migrating your old cache. This is a one-time only operation. You can interrupt this and resume the migration later on by calling `transformers.utils.move_cache()`.
+The cache for model files in Transformers v4.22.0 has been updated. Migrating your old cache. This is a one-time only operation. You can interrupt this and resume the migration later on by calling `transformers.utils.move_cache()`.
+0it [00:00, ?it/s]0it [00:00, ?it/s]0it [00:00, ?it/s]0it [00:00, ?it/s]0it [00:00, ?it/s]0it [00:00, ?it/s]
+0it [00:00, ?it/s]0it [00:00, ?it/s]
+0it [00:00, ?it/s]0it [00:00, ?it/s]
+
+0it [00:00, ?it/s]
+0it [00:00, ?it/s]
+0it [00:00, ?it/s]0it [00:00, ?it/s]0it [00:00, ?it/s]0it [00:00, ?it/s]
+
+Traceback (most recent call last):
+  File "/ailab/user/gaoyufei/InternVL/internvl_chat/internvl/train/internvl_chat_finetune.py", line 18, in <module>
+Traceback (most recent call last):
+  File "/ailab/user/gaoyufei/InternVL/internvl_chat/internvl/train/internvl_chat_finetune.py", line 18, in <module>
+    from internvl.dist_utils import init_dist
+  File "/ailab/user/gaoyufei/InternVL/internvl_chat/internvl/dist_utils.py", line 6, in <module>
+    import deepspeed
+ModuleNotFoundError: No module named 'deepspeed'
+    from internvl.dist_utils import init_dist
+  File "/ailab/user/gaoyufei/InternVL/internvl_chat/internvl/dist_utils.py", line 6, in <module>
+    import deepspeed
+ModuleNotFoundError: No module named 'deepspeed'
+Traceback (most recent call last):
+  File "/ailab/user/gaoyufei/InternVL/internvl_chat/internvl/train/internvl_chat_finetune.py", line 18, in <module>
+    from internvl.dist_utils import init_dist
+  File "/ailab/user/gaoyufei/InternVL/internvl_chat/internvl/dist_utils.py", line 6, in <module>
+    import deepspeed
+ModuleNotFoundError: No module named 'deepspeed'
+Traceback (most recent call last):
+  File "/ailab/user/gaoyufei/InternVL/internvl_chat/internvl/train/internvl_chat_finetune.py", line 18, in <module>
+    from internvl.dist_utils import init_dist
+  File "/ailab/user/gaoyufei/InternVL/internvl_chat/internvl/dist_utils.py", line 6, in <module>
+    import deepspeed
+ModuleNotFoundError: No module named 'deepspeed'
+Traceback (most recent call last):
+  File "/ailab/user/gaoyufei/InternVL/internvl_chat/internvl/train/internvl_chat_finetune.py", line 18, in <module>
+    from internvl.dist_utils import init_dist
+  File "/ailab/user/gaoyufei/InternVL/internvl_chat/internvl/dist_utils.py", line 6, in <module>
+    import deepspeed
+ModuleNotFoundError: No module named 'deepspeed'
+Traceback (most recent call last):
+  File "/ailab/user/gaoyufei/InternVL/internvl_chat/internvl/train/internvl_chat_finetune.py", line 18, in <module>
+    from internvl.dist_utils import init_dist
+  File "/ailab/user/gaoyufei/InternVL/internvl_chat/internvl/dist_utils.py", line 6, in <module>
+    import deepspeed
+ModuleNotFoundError: No module named 'deepspeed'
+Traceback (most recent call last):
+  File "/ailab/user/gaoyufei/InternVL/internvl_chat/internvl/train/internvl_chat_finetune.py", line 18, in <module>
+    from internvl.dist_utils import init_dist
+  File "/ailab/user/gaoyufei/InternVL/internvl_chat/internvl/dist_utils.py", line 6, in <module>
+    import deepspeed
+ModuleNotFoundError: No module named 'deepspeed'
+Traceback (most recent call last):
+  File "/ailab/user/gaoyufei/InternVL/internvl_chat/internvl/train/internvl_chat_finetune.py", line 18, in <module>
+    from internvl.dist_utils import init_dist
+  File "/ailab/user/gaoyufei/InternVL/internvl_chat/internvl/dist_utils.py", line 6, in <module>
+    import deepspeed
+ModuleNotFoundError: No module named 'deepspeed'
+ERROR:torch.distributed.elastic.multiprocessing.api:failed (exitcode: 1) local_rank: 0 (pid: 41718) of binary: /ailab/user/gaoyufei/.conda/envs/internvl/bin/python
+Traceback (most recent call last):
+  File "/ailab/user/gaoyufei/.conda/envs/internvl/bin/torchrun", line 8, in <module>
+    sys.exit(main())
+  File "/ailab/user/gaoyufei/.conda/envs/internvl/lib/python3.9/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 346, in wrapper
+    return f(*args, **kwargs)
+  File "/ailab/user/gaoyufei/.conda/envs/internvl/lib/python3.9/site-packages/torch/distributed/run.py", line 794, in main
+    run(args)
+  File "/ailab/user/gaoyufei/.conda/envs/internvl/lib/python3.9/site-packages/torch/distributed/run.py", line 785, in run
+    elastic_launch(
+  File "/ailab/user/gaoyufei/.conda/envs/internvl/lib/python3.9/site-packages/torch/distributed/launcher/api.py", line 134, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/ailab/user/gaoyufei/.conda/envs/internvl/lib/python3.9/site-packages/torch/distributed/launcher/api.py", line 250, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+internvl/train/internvl_chat_finetune.py FAILED
+------------------------------------------------------------
+Failures:
+[1]:
+  time      : 2024-10-23_11:10:49
+  host      : mg0621.para.ai
+  rank      : 1 (local_rank: 1)
+  exitcode  : 1 (pid: 41719)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+[2]:
+  time      : 2024-10-23_11:10:49
+  host      : mg0621.para.ai
+  rank      : 2 (local_rank: 2)
+  exitcode  : 1 (pid: 41720)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+[3]:
+  time      : 2024-10-23_11:10:49
+  host      : mg0621.para.ai
+  rank      : 3 (local_rank: 3)
+  exitcode  : 1 (pid: 41721)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+[4]:
+  time      : 2024-10-23_11:10:49
+  host      : mg0621.para.ai
+  rank      : 4 (local_rank: 4)
+  exitcode  : 1 (pid: 41722)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+[5]:
+  time      : 2024-10-23_11:10:49
+  host      : mg0621.para.ai
+  rank      : 5 (local_rank: 5)
+  exitcode  : 1 (pid: 41723)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+[6]:
+  time      : 2024-10-23_11:10:49
+  host      : mg0621.para.ai
+  rank      : 6 (local_rank: 6)
+  exitcode  : 1 (pid: 41724)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+[7]:
+  time      : 2024-10-23_11:10:49
+  host      : mg0621.para.ai
+  rank      : 7 (local_rank: 7)
+  exitcode  : 1 (pid: 41725)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2024-10-23_11:10:49
+  host      : mg0621.para.ai
+  rank      : 0 (local_rank: 0)
+  exitcode  : 1 (pid: 41718)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================

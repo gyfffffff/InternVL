@@ -37,14 +37,20 @@ def sample_prompt(prompt_path, prompt_randomseed, language):
 
 
 def format(args):
-    data_root_path = args.data_root_path
-    save_root = args.save_root
+    workdir_root = args.workdir_root
     raw_jsonl_path = args.raw_jsonl_path
     language = args.language
     image_type = args.image_type
     prompt_randomseed = args.prompt_randomseed
     prompt_path = args.prompt_path
+    save_root = args.save_root
+    image_save_file = args.image_save_file
 
+    data_root_path = f'{workdir_root}/images'
+
+    image_save_set = set()
+    with open(image_save_file, 'r') as f:
+        image_save_set = set([line.strip().split('/')[-1].split('.')[0] for line in f.readlines()])
     with open(raw_jsonl_path, 'r') as f:
         raw_data = [json.loads(line) for line in f.readlines()]
 
@@ -52,6 +58,8 @@ def format(args):
         data_item = {}
         data_item['id'] = i
         img_name = data['image']['path']
+        if img_name not in image_save_set:
+            continue
         img_format = data['image']['format'].lower()
         data_item['image'] = f'{data_root_path}/{language}/{image_type}/{img_name}.{img_format}'
         data_item['width'] = data['image']['resolution'][0] 
@@ -71,8 +79,7 @@ def format(args):
         conversations.append(conversation_gpt)
         data_item['conversations'] = conversations
 
-        save_path = f'{save_root}/{language}/{image_type}/processed/processed_{raw_jsonl_path.split("/")[-1].split(".")[0]}.jsonl'
-        os.makedirs(f'{save_root}/{language}/{image_type}/processed', exist_ok=True)
+        save_path = f'{save_root}/{language}/{image_type}/processed_{raw_jsonl_path.split("/")[-1].split(".")[0]}.jsonl'
         with open(save_path, 'a+') as f:
             f.write(json.dumps(data_item, ensure_ascii=False))
             f.write('\n')
@@ -80,13 +87,14 @@ def format(args):
 
 if __name__ == "__main__":
     argparser = argparse.ArgumentParser()
-    argparser.add_argument('--data_root_path', type=str)
-    argparser.add_argument('--save_root', type=str)
-    argparser.add_argument('--raw_jsonl_path', type=str)
+    argparser.add_argument('--workdir_root', type=str)
+    argparser.add_argument('--raw_jsonl_path', type=str)   # 所有图片的jsonl
     argparser.add_argument('--language', type=str)
     argparser.add_argument('--image_type', type=str)
     argparser.add_argument('--prompt_randomseed', type=int, default=2024)
     argparser.add_argument('--prompt_path', type=str)
+    argparser.add_argument('--save_root', type=str)
+    argparser.add_argument('--image_save_file', type=str)
     args = argparser.parse_args()
 
 

@@ -172,3 +172,5 @@ data_process/
 
 internvl_chat/internvl_finetune/data/*
 */pretrained/*
+*.zip
+flash_attn-2.3.6+cu118torch2.0cxx11abiFALSE-cp39-cp39-linux_x86_64.whl
