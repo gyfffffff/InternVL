@@ -1,0 +1,1 @@
+['/mnt/workspace/gaoyufei/InternVL/internvl_chat/pretrained/InternVL2-8B', 'textvqa_val', 0.771600000000004]

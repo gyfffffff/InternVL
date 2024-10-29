@@ -1,0 +1,16 @@
+{
+    "ar-image-text-pair-v2": {
+        "root": "/mnt/workspace/gaoyufei/xyz_v2_data/ar/image_text_pair",
+        "annotation": "/mnt/workspace/gaoyufei/InternVL/internvl_chat/xyz_data/ar/preprocessed_image_release_v2_ar_image_text_pair_json_in_part-671a196bab97-000000.jsonl",
+        "data_augment": false,
+        "repeat_time": 1,
+        "length": 262966
+    },
+    "vi-image-text-pair-v2": {
+        "root": "/mnt/workspace/gaoyufei/xyz_v2_data/vi/image_text_pair",
+        "annotation": "/mnt/workspace/gaoyufei/InternVL/internvl_chat/xyz_data/vi/preprocessed_image_release_v2_vi_image_text_pair_json_in_part-671a1733cf93-000000.jsonl",
+        "data_augment": false,
+        "repeat_time": 1,
+        "length": 269107
+    }
+}

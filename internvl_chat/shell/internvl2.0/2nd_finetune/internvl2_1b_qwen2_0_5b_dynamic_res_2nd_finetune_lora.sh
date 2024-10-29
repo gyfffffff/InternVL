@@ -32,7 +32,7 @@ torchrun \
   --model_name_or_path "./pretrained/InternVL2-1B" \
   --conv_style "Hermes-2" \
   --output_dir ${OUTPUT_DIR} \
-  --meta_path "./shell/data/internvl_1_2_finetune_custom.json" \
+  --meta_path "./shell/data/xyz_dataset.json" \
   --overwrite_output_dir True \
   --force_image_size 448 \
   --max_dynamic_patch 6 \

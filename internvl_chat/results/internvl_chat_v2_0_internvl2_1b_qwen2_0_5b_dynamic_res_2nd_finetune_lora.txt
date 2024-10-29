@@ -1,0 +1,1 @@
+['/mnt/workspace/gaoyufei/InternVL/internvl_chat/work_dirs/internvl_chat_v2_0/internvl2_1b_qwen2_0_5b_dynamic_res_2nd_finetune_lora', 'textvqa_val', 0.6935600000000025]
