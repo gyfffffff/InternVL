@@ -82,7 +82,7 @@ def load_image(image_file, input_size=448, max_num=12):
 
 # If you have an 80G A100 GPU, you can put the entire model on a single GPU.
 # Otherwise, you need to load a model using multiple GPUs, please refer to the `Multiple GPUs` section.
-path = 'InternVL/internvl_chat/pretrained/InternVL2-1B'
+path = 'work_dirs/internvl_chat_v2_0/internvl2_8b_internlm2_7b_dynamic_res_2nd_finetune_lora/checkpoint-33200'
 model = AutoModel.from_pretrained(
     path,
     torch_dtype=torch.bfloat16,
@@ -92,12 +92,12 @@ model = AutoModel.from_pretrained(
 tokenizer = AutoTokenizer.from_pretrained(path, trust_remote_code=True, use_fast=False)
 
 # set the max number of tiles in `max_num`
-pixel_values = load_image('./examples/image1.jpg', max_num=12).to(torch.bfloat16).cuda()
+pixel_values = load_image('data/SLVQA/AR/images/2.jpg', max_num=12).to(torch.bfloat16).cuda()
 generation_config = dict(max_new_tokens=1024, do_sample=False)
 
 
 # single-image single-round conversation (单图单轮对话)
-question = '<image>\nPlease describe the image shortly.'
+question = '<image>\nعرّف عن المدينة في هذه الصورة باللغة العربية، حوالي 60 كلمة.'
 response = model.chat(tokenizer, pixel_values, question, generation_config)
 print(f'User: {question}\nAssistant: {response}')
 

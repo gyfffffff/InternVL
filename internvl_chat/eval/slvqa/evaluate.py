@@ -12,7 +12,7 @@ import torch
 from internvl.model import load_model_and_tokenizer
 from internvl.train.dataset import build_transform, dynamic_preprocess
 from PIL import Image
-from slvqa import SLVQANLGEvaluator
+from slvqa_evaluator import SLVQANLGEvaluator
 from tqdm import tqdm
 
 ds_collections = {
@@ -73,7 +73,7 @@ class VQADataset(torch.utils.data.Dataset):
         question_id = data['id']
         question = data['question']
         annotation = data.get('answer', None)
-        image = data['image']
+        image = data['image'] if data['image'] else "data/SLVQA/AR/images/placeholder.jpg"
         image = Image.open(image).convert('RGB')
         if self.dynamic_image_size:
             images = dynamic_preprocess(image, image_size=self.input_size,
@@ -130,7 +130,7 @@ def evaluate_chat_model():
             input_prompt = base_prompt
         else:
             input_prompt = base_prompt
-            
+
         dataset = VQADataset(
             ds_name,
             input_prompt,
@@ -155,7 +155,6 @@ def evaluate_chat_model():
             pixel_values = pixel_values.to(torch.bfloat16).cuda()
             generation_config = dict(
                 num_beams=args.num_beams,
-                max_new_tokens=ds_collections[ds_name]['max_new_tokens'],
                 min_new_tokens=1,
                 do_sample=True if args.temperature > 0 else False,
                 temperature=args.temperature,
@@ -190,7 +189,7 @@ def evaluate_chat_model():
             time_prefix = time.strftime('%y%m%d%H%M%S', time.localtime())
             results_file = f'{ds_name}_{time_prefix}.json'
             results_file = os.path.join(args.out_dir, results_file)
-            json.dump(merged_outputs, open(results_file, 'w'))
+            json.dump(merged_outputs, open(results_file, 'w', encoding='utf-8'))
             print('Results saved to {}'.format(results_file))  
 
             if ds_collections[ds_name]['metric'] == 'accuracy':
@@ -214,11 +213,10 @@ def evaluate_chat_model():
     writer.close()
     
 
-SLVQA
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--checkpoint", type=str, required=True)
-    parser.add_argument("--dataset", type=str, default="slvqa")
+    parser.add_argument("--datasets", type=str, default="slvqa")
     parser.add_argument('--batch-size', type=int, default=1)
     parser.add_argument('--num-workers', type=int, default=1)
     parser.add_argument('--num-beams', type=int, default=5)

@@ -1,5 +1,5 @@
 from tqdm import tqdm
-
+import re
 
 
 class EvalAIAnswerProcessor:
@@ -245,13 +245,55 @@ class SLVQANLGEvaluator:
 
         return unique_answer_scores       
 
-    def eval_pred_list(self, pred_list):
-        pred_scores = []
-        for entry in tqdm(pred_list):
-            pred_answer = self.answer_processor(entry['pred_answer'])
-            unique_answer_scores = self._compute_answer_scores(entry['gt_answers'])
-            score = unique_answer_scores.get(pred_answer, 0)
-            pred_scores.append(score)
+    def compute_bleu_score(self, pred_answer, gt_answer):
+        from nltk.translate.bleu_score import sentence_bleu
+        return sentence_bleu([gt_answer.split()], pred_answer.split())
+    
+    def compute_meteor_score(self, pred_answer, gt_answer):
+        from nltk.translate.meteor_score import meteor_score
+        return meteor_score([gt_answer], pred_answer)
+    
+    def compute_rouge_score(self, pred_answer, gt_answer):
+        from nltk.translate.bleu_score import sentence_bleu
+        return sentence_bleu([gt_answer.split()], pred_answer.split())
+    
+    def compute_spice_score(self, pred_answer, gt_answer):
+        from nltk.translate.bleu_score import sentence_bleu
+        return sentence_bleu([gt_answer.split()], pred_answer.split())
+    
+    def compute_cider_score(self, pred_answer, gt_answer):
+        from nltk.translate.bleu_score import sentence_bleu
+        return sentence_bleu([gt_answer.split()], pred_answer.split())
 
-        accuracy = sum(pred_scores) / len(pred_scores)
-        return accuracy
+
+    def eval_pred_list(self, pred_list):
+        # slvqa_gen_score:
+        # - B-4 (BLEU-4)
+        # - M (METEOR)
+        # - R (ROUGE-L)
+        # - S (SPICE)
+        # - C (CIDEr)
+
+        # pred_list:
+        # [{"question_id": , "question": "", "answer": "", "annotation": ""}, {...}, ...]
+        scores = {}
+        for metric in ["B-4", "M", "R", "S", "C"]:
+            scores[metric] = {}  # question_id, score
+
+
+        for entry in tqdm(pred_list):
+            pred_answer = self.answer_processor(entry["answer"])
+            gt_answer = entry['annotation']
+            question_id = entry['question_id']
+            scores["B-4"][question_id] = self.compute_bleu_score(pred_answer, gt_answer)
+            scores["M"][question_id] = self.compute_meteor_score(pred_answer, gt_answer)
+            scores["R"][question_id] = self.compute_rouge_score(pred_answer, gt_answer)
+            scores["S"][question_id] = self.compute_spice_score(pred_answer, gt_answer)
+            scores["C"][question_id] = self.compute_cider_score(pred_answer, gt_answer)
+
+        total_scores = {}
+        for metric in ["B-4", "M", "R", "S", "C"]:
+            total_scores[metric] = sum(scores[metric].values()) / len(scores[metric])
+
+        return total_scores, scores
+
