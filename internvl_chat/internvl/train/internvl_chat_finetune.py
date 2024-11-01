@@ -767,7 +767,6 @@ def main():
         dynamic_image_size=data_args.dynamic_image_size, use_thumbnail=data_args.use_thumbnail,
         min_dynamic_patch=data_args.min_dynamic_patch, max_dynamic_patch=data_args.max_dynamic_patch,
         normalize_type=data_args.normalize_type)
-
     def _freeze_params(module):
         for param in module.parameters():
             param.requires_grad = False
@@ -821,7 +820,7 @@ def main():
         tokenizer=tokenizer,
         data_collator=concat_pad_data_collator
     )
-
+    
     # Training
     if training_args.do_train:
         checkpoint = None
