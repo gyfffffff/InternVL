@@ -94,7 +94,6 @@ class VQADataset(torch.utils.data.Dataset):
         }
 
 class InferenceSampler(torch.utils.data.sampler.Sampler):
-
     def __init__(self, size):
         self._size = int(size)
         assert size > 0
@@ -215,7 +214,7 @@ def evaluate_chat_model():
     writer.close()
     
 
-
+SLVQA
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--checkpoint", type=str, required=True)

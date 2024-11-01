@@ -641,3 +641,13 @@ if [ ${DATASET} == "rsvqa-hr-test2" ]; then
         --master_port=${MASTER_PORT} \
         eval/domain_specific/rs_vqa/evaluate.py --checkpoint ${CHECKPOINT} --datasets RSVQA_L  "${ARGS[@]:2}"
 fi
+
+if [ ${DATASET} == "slvqa" ]; then
+    torchrun \
+        --nnodes=1 \
+        --node_rank=0 \
+        --master_addr=127.0.0.1 \
+        --nproc_per_node=${GPUS} \
+        --master_port=${MASTER_PORT} \
+        eval/slvqa/evaluate.py --checkpoint ${CHECKPOINT} --datasets slvqa_ar_vqa,slvqa_ar_nlg,slvqa_vi_vqa,slvqa_vi_nlg  "${ARGS[@]:2}"
+fi
