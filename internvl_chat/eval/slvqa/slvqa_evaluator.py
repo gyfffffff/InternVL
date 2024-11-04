@@ -254,16 +254,21 @@ class SLVQANLGEvaluator:
         return meteor_score([gt_answer], pred_answer)
     
     def compute_rouge_score(self, pred_answer, gt_answer):
-        from nltk.translate.bleu_score import sentence_bleu
-        return sentence_bleu([gt_answer.split()], pred_answer.split())
-    
+        from rouge import Rouge
+        rouger = Rouge()
+        rouger.get_scores(pred_answer, gt_answer)
+        return rouger['rouge-l']['f']
+
     def compute_spice_score(self, pred_answer, gt_answer):
-        from nltk.translate.bleu_score import sentence_bleu
-        return sentence_bleu([gt_answer.split()], pred_answer.split())
+        from aac_metrics import evaluate
+        corpus_scores, _ = evaluate([gt_answer], pred_answer)
+        return corpus_scores['SPICE']
     
     def compute_cider_score(self, pred_answer, gt_answer):
-        from nltk.translate.bleu_score import sentence_bleu
-        return sentence_bleu([gt_answer.split()], pred_answer.split())
+        from aac_metrics import evaluate
+        corpus_scores, _ = evaluate([gt_answer], pred_answer)
+        return corpus_scores['CIDEr']
+        
 
 
     def eval_pred_list(self, pred_list):
