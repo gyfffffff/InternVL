@@ -248,26 +248,22 @@ class SLVQANLGEvaluator:
     def compute_bleu_score(self, pred_answer, gt_answer):
         from nltk.translate.bleu_score import sentence_bleu
         return sentence_bleu([gt_answer.split()], pred_answer.split())
-    
+
     def compute_meteor_score(self, pred_answer, gt_answer):
         from nltk.translate.meteor_score import meteor_score
-        return meteor_score([gt_answer], pred_answer)
-    
+        print(f"pred_answer: {pred_answer}, gt_answer: {gt_answer}")
+        return meteor_score([gt_answer.split()], pred_answer.split())
+
     def compute_rouge_score(self, pred_answer, gt_answer):
         from rouge import Rouge
         rouger = Rouge()
-        rouger.get_scores(pred_answer, gt_answer)
-        return rouger['rouge-l']['f']
+        scores = rouger.get_scores(pred_answer, gt_answer)
+        return scores[0]['rouge-l']['f']
 
-    def compute_spice_score(self, pred_answer, gt_answer):
+    def compute_spice_cider_score(self, pred_answer, gt_answer):
         from aac_metrics import evaluate
-        corpus_scores, _ = evaluate([gt_answer], pred_answer)
-        return corpus_scores['SPICE']
-    
-    def compute_cider_score(self, pred_answer, gt_answer):
-        from aac_metrics import evaluate
-        corpus_scores, _ = evaluate([gt_answer], pred_answer)
-        return corpus_scores['CIDEr']
+        corpus_scores, _ = evaluate([pred_answer, pred_answer], [[gt_answer], [gt_answer]])
+        return corpus_scores['spice'], corpus_scores['cider_d']
         
 
 
@@ -288,17 +284,17 @@ class SLVQANLGEvaluator:
 
         for entry in tqdm(pred_list):
             pred_answer = self.answer_processor(entry["answer"])
-            gt_answer = entry['annotation']
+            # gt_answer = entry['annotation']
+            gt_answer = "d"
             question_id = entry['question_id']
             scores["B-4"][question_id] = self.compute_bleu_score(pred_answer, gt_answer)
             scores["M"][question_id] = self.compute_meteor_score(pred_answer, gt_answer)
             scores["R"][question_id] = self.compute_rouge_score(pred_answer, gt_answer)
-            scores["S"][question_id] = self.compute_spice_score(pred_answer, gt_answer)
-            scores["C"][question_id] = self.compute_cider_score(pred_answer, gt_answer)
+            scores["S"][question_id], scores["C"][question_id] = self.compute_spice_cider_score(pred_answer, gt_answer)
 
-        total_scores = {}
+        average_scores = {}
         for metric in ["B-4", "M", "R", "S", "C"]:
-            total_scores[metric] = sum(scores[metric].values()) / len(scores[metric])
+            average_scores[metric] = sum(scores[metric].values()) / len(scores[metric])
 
-        return total_scores, scores
+        return average_scores, scores
 

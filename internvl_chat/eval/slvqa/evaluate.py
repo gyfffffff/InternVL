@@ -23,6 +23,14 @@ ds_collections = {
     'slvqa_ar_nlg': {
         'test': 'data/SLVQA/AR/NLG/val.jsonl',
         'metric': 'slvqa_gen_score',
+    },
+    'slvqa_vi_vqa': {
+        'test': 'data/SLVQA/VI/VQA/val.jsonl',
+        'metric': 'accuracy',
+    },
+    'slvqa_vi_nlg': {
+        'test': 'data/SLVQA/VI/NLG/val.jsonl',
+        'metric': 'slvqa_gen_score',
     }
 }
 
@@ -61,7 +69,7 @@ class VQADataset(torch.utils.data.Dataset):
         self.transform = build_transform(is_train=False, input_size=input_size)
         self.dataset_name = dataset_name
         self.data = []
-        with open(ds_collections[dataset_name]['test'], 'r') as f:
+        with open(ds_collections[dataset_name]['test'], 'r', encoding="utf-8") as f:
             for line in f:
                 self.data.append(json.loads(line))
 
@@ -158,6 +166,7 @@ def evaluate_chat_model():
                 min_new_tokens=1,
                 do_sample=True if args.temperature > 0 else False,
                 temperature=args.temperature,
+                max_new_tokens=150,
             )
             pred = model.chat(
                 tokenizer=tokenizer,
@@ -189,7 +198,7 @@ def evaluate_chat_model():
             time_prefix = time.strftime('%y%m%d%H%M%S', time.localtime())
             results_file = f'{ds_name}_{time_prefix}.json'
             results_file = os.path.join(args.out_dir, results_file)
-            json.dump(merged_outputs, open(results_file, 'w', encoding='utf-8'))
+            json.dump(merged_outputs, open(results_file, 'w', encoding='utf-8'), ensure_ascii=False, indent=4)
             print('Results saved to {}'.format(results_file))  
 
             if ds_collections[ds_name]['metric'] == 'accuracy':
@@ -198,7 +207,8 @@ def evaluate_chat_model():
                 summaries.append([ds_name, {'accuracy': accuracy}])
             elif ds_collections[ds_name]['metric'] == 'slvqa_gen_score':
                 evaluator = SLVQANLGEvaluator()
-                scores = evaluator.eval_pred_list(merged_outputs)
+                scores, total_scores = evaluator.eval_pred_list(merged_outputs)
+                print(total_scores)
                 for k, v in scores.items():
                     print(ds_name, {k: v})
                     summaries.append([ds_name, {k: v}])
