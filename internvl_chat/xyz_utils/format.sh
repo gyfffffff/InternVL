@@ -17,7 +17,7 @@ python xyz_utils/format.py \
     --image_jsonl /mnt/workspace/gaoyufei/InternVL/internvl_chat/xyz_data/ar/${jsonl_name} \
     --language ar \
     --prompt_path /mnt/workspace/gaoyufei/InternVL/internvl_chat/xyz_utils/prompt.json \
-    --save_path /mnt/workspace/gaoyufei/InternVL/internvl_chat/xyz_data/ar/preprocessed_newprompt_10k_${jsonl_name} \
+    --save_path /mnt/workspace/gaoyufei/InternVL/internvl_chat/xyz_data/ar/preprocessed_newprompt_100k_${jsonl_name} \
     --image_safe_file /mnt/workspace/gaoyufei/InternVL/internvl_chat/xyz_data/ar/image_text_pair_save.txt \
     --version  "" \
     --image_save_path ${image_save_path} \

@@ -124,15 +124,15 @@
             "id": 8,
             "image-type": "image-text-pair",
             "prompt": {
-                "cn": "考虑到某些原因，这张图片已被替换为以下文本",
-                "ar": "نظرًا لبعض الأسباب، تم استبدال الصورة بالنص التالي",
-                "ru": "По некоторым причинам изображение заменено на следующий текст",
-                "th": "เนื่องจากเหตุผลบางประการ ภาพนี้ถูกแทนที่ด้วยข้อความต่อไปนี้",
-                "ko": "어떤 이유로 이미지가 다음 텍스트로 바뀌었습니다",
-                "vi": "Vì một số lý do, hình ảnh đã được thay thế bằng văn bản sau",
-                "hu": "Bizonyos okokból a kép erre a szövegre lett cserélve",
-                "cs": "Z důvodu některých důvodů byl obrázek nahrazen za následující text",
-                "sr": "Из неког разлога, слика је замењена са следећим текстом"
+                "cn": "这张图片的文字描述是什么？",
+                "ar": "ما هو وصف الصورة؟",
+                "ru": "Какое описание изображения?",
+                "th": "คำอธิบายของภาพคืออะไร?",
+                "ko": "이 이미지의 텍스트 설명은 무엇인가요?",
+                "vi": "Mô tả văn bản của hình ảnh là gì?",
+                "hu": "Mi a kép szöveges leírása?",
+                "cs": "Jaký je popis obrázku?",
+                "sr": "Какав је опис слике?"
             }
         },
         {
@@ -304,14 +304,15 @@
             "id": 20,
             "image-type": "image-text-pair",
             "prompt": {
-                "cn": "出现了什么人或物？用阿拉伯语回答。",
-                "ar": "من هم الأشخاص أو الأشياء في الصورة؟ أجب بالعربية.",
-                "ru": "Кто или что на изображении? Ответьте на арабском.",
-                "th": "มีคนหรือสิ่งใดอยู่ในภาพ? ตอบเป็นภาษาอาหรับ",
-                "ko": "이미지에 누가 있나요? 아랍어로 대답하세요.",
-                "vi": "Có người hoặc vật gì trong hình ảnh? Trả lời bằng tiếng Ả Rập.",
-                "hu": "Ki vagy mi van a képen? Válaszolj arabul.",
-                "cs": "Kdo nebo co je na obrázku? Odpovězte v arabštině."
+                "cn": "出现了什么人或物？",
+                "ar": "من هم الأشخاص أو الأشياء في الصورة؟",
+                "ru": "Кто или что на изображении?",
+                "th": "มีคนหรือสิ่งของอะไรบ้างในภาพ?",
+                "ko": "이 이미지에 누가 있나요?",
+                "vi": "Có ai hoặc cái gì trong hình ảnh?",
+                "hu": "Ki vagy mi van a képen?",
+                "cs": "Kdo nebo co je na obrázku?",
+                "sr": "Ко је или шта је на слици?"
             }
         }
     ]
