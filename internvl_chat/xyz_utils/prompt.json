@@ -4,135 +4,314 @@
             "id": 0,
             "image-type": "image-text-pair",
             "prompt": {
-                "cn": "该图片替换文本为\n",
-                "ar": "استبدل النص في الصورة بـ\n",
-                "ru": "Замените текст на изображении на\n",
-                "th": "แทนที่ข้อความในภาพด้วย\n",
-                "ko": "이미지의 텍스트를 다음으로 바꾸세요\n",
-                "vi": "Thay thế văn bản trong hình ảnh bằng\n",
-                "hu": "Cserélje le a képen lévő szöveget erre\n",
-                "cs": "Nahraďte text na obrázku za\n",
-                "sr": "Замените текст на слици са\n"
+                "cn": "该图片替换文本为",
+                "ar": "استبدل النص في الصورة بـ",
+                "ru": "Замените текст на изображении на",
+                "th": "แทนที่ข้อความในภาพด้วย",
+                "ko": "이미지의 텍스트를 다음으로 바꾸세요",
+                "vi": "Thay thế văn bản trong hình ảnh bằng",
+                "hu": "Cserélje le a képen lévő szöveget erre",
+                "cs": "Nahraďte text na obrázku za",
+                "sr": "Замените текст на слици са"
             }
         },
         {
             "id": 1,
             "image-type": "image-text-pair",
             "prompt": {
-                "cn": "该图片的替换文本为\n",
-                "ar": "استبدل النص في الصورة بـ\n",
-                "ru": "Замените текст на изображении на\n",
-                "th": "แทนที่ข้อความในภาพด้วย\n",
-                "ko": "이미지의 텍스트를 다음으로 바꾸세요\n",
-                "vi": "Thay thế văn bản trong hình ảnh bằng\n",
-                "hu": "Cserélje le a képen lévő szöveget erre\n",
-                "cs": "Nahraďte text na obrázku za\n",
-                "sr": "Замените текст на слици са\n"
+                "cn": "该图片的替换文本为",
+                "ar": "استبدل النص في الصورة بـ",
+                "ru": "Замените текст на изображении на",
+                "th": "แทนที่ข้อความในภาพด้วย",
+                "ko": "이미지의 텍스트를 다음으로 바꾸세요",
+                "vi": "Thay thế văn bản trong hình ảnh bằng",
+                "hu": "Cserélje le a képen lévő szöveget erre",
+                "cs": "Nahraďte text na obrázku za",
+                "sr": "Замените текст на слици са"
             }
         },
         {
             "id": 2,
             "image-type": "image-text-pair",
             "prompt": {
-                "cn": "由于隐私问题，该图片已被替换为\n",
-                "ar": "تم استبدال الصورة بـ\n",
-                "ru": "Из-за конфиденциальности изображение заменено на\n",
-                "th": "เนื่องจากเรื่องความเป็นส่วนตัว ภาพถูกแทนที่ด้วย\n",
-                "ko": "개인정보 문제로 이미지가 다음으로 바뀌었습니다\n",
-                "vi": "Vì lý do riêng tư, hình ảnh đã được thay thế bằng\n",
-                "hu": "Adatvédelmi okokból a kép erre lett cserélve\n",
-                "cs": "Z důvodu ochrany soukromí bylo obrázek nahrazen za\n",
-                "sr": "Због приватности, слика је замењена са\n"
+                "cn": "由于隐私问题，该图片已被替换为",
+                "ar": "تم استبدال الصورة بـ",
+                "ru": "Из-за конфиденциальности изображение заменено на",
+                "th": "เนื่องจากเรื่องความเป็นส่วนตัว ภาพถูกแทนที่ด้วย",
+                "ko": "개인정보 문제로 이미지가 다음으로 바뀌었습니다",
+                "vi": "Vì lý do riêng tư, hình ảnh đã được thay thế bằng",
+                "hu": "Adatvédelmi okokból a kép erre lett cserélve",
+                "cs": "Z důvodu ochrany soukromí bylo obrázek nahrazen za",
+                "sr": "Због приватности, слика је замењена са"
             }
         },
         {
             "id": 3,
             "image-type": "image-text-pair",
             "prompt": {
-                "cn": "该图片可以被替换为\n",
-                "ar": "يمكن استبدال الصورة بـ\n",
-                "ru": "Изображение можно заменить на\n",
-                "th": "ภาพนี้สามารถแทนที่ด้วย\n",
-                "ko": "이 이미지는 다음으로 바꿀 수 있습니다\n",
-                "vi": "Hình ảnh này có thể được thay thế bằng\n",
-                "hu": "Ezt a képet erre lehet cserélni\n",
-                "cs": "Tento obrázek můžete nahradit za\n",
-                "sr": "Ова слика може бити замењена са\n"
+                "cn": "该图片可以被替换为",
+                "ar": "يمكن استبدال الصورة بـ",
+                "ru": "Изображение можно заменить на",
+                "th": "ภาพนี้สามารถแทนที่ด้วย",
+                "ko": "이 이미지는 다음으로 바꿀 수 있습니다",
+                "vi": "Hình ảnh này có thể được thay thế bằng",
+                "hu": "Ezt a képet erre lehet cserélni",
+                "cs": "Tento obrázek můžete nahradit za",
+                "sr": "Ова слика може бити замењена са"
             }
         },
         {
             "id": 4,
             "image-type": "image-text-pair",
             "prompt": {
-                "cn": "该图片的代替文本是\n",
-                "ar": "نص الصورة البديل هو\n",
-                "ru": "Альтернативный текст изображения\n",
-                "th": "ข้อความทดแทนของภาพ\n",
-                "ko": "이미지의 대체 텍스트\n",
-                "vi": "Văn bản thay thế của hình ảnh\n",
-                "hu": "A kép alternatív szövege\n",
-                "cs": "Alternativní text obrázku\n",
-                "sr": "Алтернативни текст слике\n"
+                "cn": "该图片的代替文本是",
+                "ar": "نص الصورة البديل هو",
+                "ru": "Альтернативный текст изображения",
+                "th": "ข้อความทดแทนของภาพ",
+                "ko": "이미지의 대체 텍스트",
+                "vi": "Văn bản thay thế của hình ảnh",
+                "hu": "A kép alternatív szövege",
+                "cs": "Alternativní text obrázku",
+                "sr": "Алтернативни текст слике"
             }
         },
         {
             "id": 5,
             "image-type": "image-text-pair",
             "prompt": {
-                "cn": "用文字取代该图片\n",
-                "ar": "استبدل الصورة بالنص\n",
-                "ru": "Замените изображение текстом\n",
-                "th": "แทนที่ภาพด้วยข้อความ\n",
-                "ko": "이미지를 텍스트로 바꾸세요\n",
-                "vi": "Thay thế hình ảnh bằng văn bản\n",
-                "hu": "Cserélje le a képet szöveggel\n",
-                "cs": "Nahraďte obrázek textem\n",
-                "sr": "Замените слику текстом\n"
+                "cn": "用文字取代该图片",
+                "ar": "استبدل الصورة بالنص",
+                "ru": "Замените изображение текстом",
+                "th": "แทนที่ภาพด้วยข้อความ",
+                "ko": "이미지를 텍스트로 바꾸세요",
+                "vi": "Thay thế hình ảnh bằng văn bản",
+                "hu": "Cserélje le a képet szöveggel",
+                "cs": "Nahraďte obrázek textem",
+                "sr": "Замените слику текстом"
             }
         },
         {
             "id": 6,
             "image-type": "image-text-pair",
             "prompt": {
-                "cn": "用文本替换这张图片的结果是\n",
-                "ar": "استبدل الصورة بالنص\n",
-                "ru": "Результат замены изображения текстом\n",
-                "th": "ผลลัพธ์ของการแทนที่ภาพด้วยข้อความ\n",
-                "ko": "이미지를 텍스트로 바꾸면\n",
-                "vi": "Kết quả của việc thay thế hình ảnh bằng văn bản\n",
-                "hu": "A kép szöveges cseréjének eredménye\n",
-                "cs": "Výsledek nahrazení obrázku textem\n",
-                "sr": "Резултат замене слике текстом\n"
+                "cn": "用文本替换这张图片的结果是",
+                "ar": "استبدل الصورة بالنص",
+                "ru": "Результат замены изображения текстом",
+                "th": "ผลลัพธ์ของการแทนที่ภาพด้วยข้อความ",
+                "ko": "이미지를 텍스트로 바꾸면",
+                "vi": "Kết quả của việc thay thế hình ảnh bằng văn bản",
+                "hu": "A kép szöveges cseréjének eredménye",
+                "cs": "Výsledek nahrazení obrázku textem",
+                "sr": "Резултат замене слике текстом"
             }
         },
         {
             "id": 7,
             "image-type": "image-text-pair",
             "prompt": {
-                "cn": "请你用文字取代这张图片\n",
-                "ar": "يرجى استبدال الصورة بالنص\n",
-                "ru": "Пожалуйста, замените изображение текстом\n",
-                "th": "กรุณาแทนที่ภาพด้วยข้อความ\n",
-                "ko": "이 이미지를 텍스트로 바꾸세요\n",
-                "vi": "Hãy thay thế hình ảnh bằng văn bản\n",
-                "hu": "Kérem, cserélje le a képet szöveggel\n",
-                "cs": "Prosím, nahraďte obrázek textem\n",
-                "sr": "Молим вас, замените слику текстом\n"
+                "cn": "请你用文字取代这张图片",
+                "ar": "يرجى استبدال الصورة بالنص",
+                "ru": "Пожалуйста, замените изображение текстом",
+                "th": "กรุณาแทนที่ภาพด้วยข้อความ",
+                "ko": "이 이미지를 텍스트로 바꾸세요",
+                "vi": "Hãy thay thế hình ảnh bằng văn bản",
+                "hu": "Kérem, cserélje le a képet szöveggel",
+                "cs": "Prosím, nahraďte obrázek textem",
+                "sr": "Молим вас, замените слику текстом"
             }
         },
         {
             "id": 8,
             "image-type": "image-text-pair",
             "prompt": {
-                "cn": "考虑到某些原因，这张图片已被替换为以下文本\n",
-                "ar": "نظرًا لبعض الأسباب، تم استبدال الصورة بالنص التالي\n",
-                "ru": "По некоторым причинам изображение заменено на следующий текст\n",
-                "th": "เนื่องจากเหตุผลบางประการ ภาพนี้ถูกแทนที่ด้วยข้อความต่อไปนี้\n",
-                "ko": "어떤 이유로 이미지가 다음 텍스트로 바뀌었습니다\n",
-                "vi": "Vì một số lý do, hình ảnh đã được thay thế bằng văn bản sau\n",
-                "hu": "Bizonyos okokból a kép erre a szövegre lett cserélve\n",
-                "cs": "Z důvodu některých důvodů byl obrázek nahrazen za následující text\n",
-                "sr": "Из неког разлога, слика је замењена са следећим текстом\n"
+                "cn": "考虑到某些原因，这张图片已被替换为以下文本",
+                "ar": "نظرًا لبعض الأسباب، تم استبدال الصورة بالنص التالي",
+                "ru": "По некоторым причинам изображение заменено на следующий текст",
+                "th": "เนื่องจากเหตุผลบางประการ ภาพนี้ถูกแทนที่ด้วยข้อความต่อไปนี้",
+                "ko": "어떤 이유로 이미지가 다음 텍스트로 바뀌었습니다",
+                "vi": "Vì một số lý do, hình ảnh đã được thay thế bằng văn bản sau",
+                "hu": "Bizonyos okokból a kép erre a szövegre lett cserélve",
+                "cs": "Z důvodu některých důvodů byl obrázek nahrazen za následující text",
+                "sr": "Из неког разлога, слика је замењена са следећим текстом"
+            }
+        },
+        {
+            "id": 9,
+            "image-type": "image-pure",
+            "prompt": {
+                "cn": "该图片描述为",
+                "ar": "صف الصورة بـ",
+                "ru": "Описание изображения",
+                "th": "รายละเอียดของภาพ",
+                "ko": "이 이미지는",
+                "vi": "Hình ảnh này",
+                "hu": "A kép leírása",
+                "cs": "Popis obrázku",
+                "sr": "Опис слике"
+            }
+        },
+        {
+            "id": 10,
+            "image-type": "image-pure",
+            "prompt": {
+                "cn": "这张图片的描述是",
+                "ar": "وصف الصورة هو",
+                "ru": "Описание изображения",
+                "th": "รายละเอียดของภาพ",
+                "ko": "이 이미지는",
+                "vi": "Hình ảnh này",
+                "hu": "A kép leírása",
+                "cs": "Popis obrázku",
+                "sr": "Опис слике"
+            }
+        },
+        {
+            "id": 11,
+            "image-type": "image-pure",
+            "prompt": {
+                "cn": "请你描述这张图片",
+                "ar": "صف الصورة",
+                "ru": "Опишите это изображение",
+                "th": "อธิบายภาพนี้",
+                "ko": "이 이미지를 설명해주세요",
+                "vi": "Mô tả hình ảnh này",
+                "hu": "Kérlek írd le ezt a képet",
+                "cs": "Popište tento obrázek",
+                "sr": "Опишите ову слику"
+            }
+        },
+        {
+            "id": 12,
+            "image-type": "image-pure",
+            "prompt": {
+                "cn": "我是一个视障人士，请你为我讲述这张图片",
+                "ar": "أنا شخص مكفوف، يرجى وصف الصورة لي",
+                "ru": "Я слабовидящий, пожалуйста, опишите мне это изображение",
+                "th": "ฉันเป็นคนตาบอด โปรดอธิบายภาพนี้ให้ฉันฟัง",
+                "ko": "나는 시각장애인입니다. 이 이미지를 설명해주세요",
+                "vi": "Tôi là người mù, bạn có thể mô tả hình ảnh này không?",
+                "hu": "Vak vagyok, kérlek, mond el nekem ezt a képet",
+                "cs": "Jsem nevidomý, prosím, popište mi tento obrázek",
+                "sr": "Слепа сам, молим вас опишите ми ову слику"
+            }
+        },
+        {
+            "id": 13,
+            "image-type": "image-pure",
+            "prompt": {
+                "cn": "现在你是一个老师，请你为学生们讲解这张图片",
+                "ar": "أنت الآن معلم، يرجى شرح الصورة للطلاب",
+                "ru": "Теперь вы учитель, объясните эту картинку ученикам",
+                "th": "ตอนนี้คุณเป็นครู โปรดอธิบายภาพนี้ให้นักเรียน",
+                "ko": "당신은 선생님입니다. 학생들에게 이 이미지를 설명해주세요",
+                "vi": "Bây giờ bạn là một giáo viên, bạn có thể giải thích hình ảnh này không?",
+                "hu": "Most tanár vagy, kérlek, magyarázd el ezt a képet a diákoknak",
+                "cs": "Nyní jste učitel, prosím, vysvětlete tento obrázek studentům",
+                "sr": "Сада сте наставник, молим вас објасните ову слику ученицима"
+            }
+        },
+        {
+            "id": 14,
+            "image-type": "image-pure",
+            "prompt": {
+                "cn": "你是一个讲解员，请你为观众讲述这张图片",
+                "ar": "أنت مقدم البرنامج، يرجى شرح الصورة للجمهور",
+                "ru": "Вы комментатор, объясните эту картинку зрителям",
+                "th": "คุณเป็นผู้นำเสนอ โปรดอธิบายภาพนี้ให้ผู้ชม",
+                "ko": "당신은 해설자입니다. 관객들에게 이 이미지를 설명해주세요",
+                "vi": "Bạn là người hướng dẫn, bạn có thể giải thích hình ảnh này không?",
+                "hu": "Ön az előadó, kérlek, magyarázza el ezt a képet a nézőknek",
+                "cs": "Jste moderátor, prosím, vysvětlete tento obrázek divákům",
+                "sr": "Ви сте водитељ, молим вас објасните ову слику гледаоцима"
+            }
+        },
+        {
+            "id": 15,
+            "image-type": "image-pure",
+            "prompt": {
+                "cn": "请你为我讲解图片",
+                "ar": "يرجى شرح الصورة لي",
+                "ru": "Пожалуйста, объясните мне это изображение",
+                "th": "โปรดอธิบายภาพให้ฉันฟัง",
+                "ko": "이 이미지를 설명해주세요",
+                "vi": "Bạn có thể giải thích hình ảnh này không?",
+                "hu": "Kérlek, magyarázd el nekem ezt a képet",
+                "cs": "Prosím, vysvětlete mi tento obrázek",
+                "sr": "Молим вас објасните ми ову слику"
+            }
+        },
+        {
+            "id": 16,
+            "image-type": "image-pure",
+            "prompt": {
+                "cn": "请你为我讲述一张图片",
+                "ar": "يرجى شرح صورة لي",
+                "ru": "Пожалуйста, расскажите мне об изображении",
+                "th": "โปรดอธิบายภาพให้ฉันฟัง",
+                "ko": "이미지를 설명해주세요",
+                "vi": "Bạn có thể giải thích hình ảnh này không?",
+                "hu": "Kérlek, magyarázd el nekem ezt a képet",
+                "cs": "Prosím, vysvětlete mi tento obrázek",
+                "sr": "Молим вас објасните ми ову слику"
+            }
+        },
+        {
+            "id": 17,
+            "image-type": "image-pure",
+            "prompt": {
+                "cn": "描述这张图片",
+                "ar": "صف الصورة",
+                "ru": "Опишите это изображение",
+                "th": "อธิบายภาพนี้",
+                "ko": "이 이미지를 설명해주세요",
+                "vi": "Mô tả hình ảnh này",
+                "hu": "Írd le ezt a képet",
+                "cs": "Popište tento obrázek",
+                "sr": "Опишите ову слику"
+            }
+        },
+        {
+            "id": 18,
+            "image-type": "image-text-pair",
+            "prompt": {
+                "cn": "这张图片里有什么？",
+                "ar": "ماذا يوجد في الصورة؟",
+                "ru": "Что на изображении?",
+                "th": "ในภาพมีอะไร?",
+                "ko": "이 이미지에는 무엇이 있나요?",
+                "vi": "Trong hình ảnh có gì?",
+                "hu": "Mi van a képen?",
+                "cs": "Co je na obrázku?",
+                "sr": "Шта је на слици?"
+            }
+        },
+        {
+            "id": 19,
+            "image-type": "image-text-pair",
+            "prompt": {
+                "cn": "这张图片的内容是什么？",
+                "ar": "ما هو محتوى الصورة؟",
+                "ru": "Что на изображении?",
+                "th": "เนื้อหาของภาพคืออะไร?",
+                "ko": "이 이미지의 내용은 무엇인가요?",
+                "vi": "Nội dung của hình ảnh là gì?",
+                "hu": "Mi a kép tartalma?",
+                "cs": "Co je obsahem obrázku?",
+                "sr": "Шта је садржај слике?"
+            }
+        },
+        {
+            "id": 20,
+            "image-type": "image-text-pair",
+            "prompt": {
+                "cn": "出现了什么人或物？用阿拉伯语回答。",
+                "ar": "من هم الأشخاص أو الأشياء في الصورة؟ أجب بالعربية.",
+                "ru": "Кто или что на изображении? Ответьте на арабском.",
+                "th": "มีคนหรือสิ่งใดอยู่ในภาพ? ตอบเป็นภาษาอาหรับ",
+                "ko": "이미지에 누가 있나요? 아랍어로 대답하세요.",
+                "vi": "Có người hoặc vật gì trong hình ảnh? Trả lời bằng tiếng Ả Rập.",
+                "hu": "Ki vagy mi van a képen? Válaszolj arabul.",
+                "cs": "Kdo nebo co je na obrázku? Odpovězte v arabštině."
             }
         }
     ]

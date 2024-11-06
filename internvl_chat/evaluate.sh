@@ -649,5 +649,5 @@ if [ ${DATASET} == "slvqa" ]; then
         --master_addr=127.0.0.1 \
         --nproc_per_node=${GPUS} \
         --master_port=${MASTER_PORT} \
-        eval/slvqa/evaluate.py --checkpoint ${CHECKPOINT} --datasets slvqa_ar_vqa,slvqa_ar_nlg,slvqa_vi_vqa,slvqa_vi_nlg  "${ARGS[@]:2}"
+        eval/slvqa/evaluate.py --checkpoint ${CHECKPOINT} --datasets slvqa_ar_nlg  "${ARGS[@]:2}"
 fi

@@ -60,6 +60,8 @@ def format(args):
         img_name = data['image']['path'].split('/')[-1].split('.')[0]
         if img_name not in image_safe_set:
             continue
+        if i > 10000:
+            break
         img_format = data['image']['format'].lower()
         data_item['image'] = f'{image_save_path}/{language}/{image_type}/{img_name}'
         data_item['width'] = data['image']['resolution'][0] 

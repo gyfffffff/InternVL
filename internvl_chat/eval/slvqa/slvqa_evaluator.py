@@ -284,8 +284,7 @@ class SLVQANLGEvaluator:
 
         for entry in tqdm(pred_list):
             pred_answer = self.answer_processor(entry["answer"])
-            # gt_answer = entry['annotation']
-            gt_answer = "d"
+            gt_answer = entry['annotation']
             question_id = entry['question_id']
             scores["B-4"][question_id] = self.compute_bleu_score(pred_answer, gt_answer)
             scores["M"][question_id] = self.compute_meteor_score(pred_answer, gt_answer)
