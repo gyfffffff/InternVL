@@ -314,6 +314,51 @@
                 "cs": "Kdo nebo co je na obrázku?",
                 "sr": "Ко је или шта је на слици?"
             }
+        },
+        {
+            "id": 21,
+            "image-type": "image-text-pair",
+            "prompt": {
+                "cn": "这是什么？",
+                "ar": "ما هذا؟",
+                "ru": "Что это?",
+                "th": "นี่คืออะไร?",
+                "ko": "이게 뭐에요?",
+                "vi": "Đây là cái gì?",
+                "hu": "Ez mi?",
+                "cs": "Co to je?",
+                "sr": "Шта је ово?"
+            }
+        },
+        {
+            "id": 22,
+            "image-type": "image-text-pair",
+            "prompt": {
+                "cn": "这张图片中有什么人或物？",
+                "ar": "من هم الأشخاص أو الأشياء في الصورة؟",
+                "ru": "Кто или что на изображении?",
+                "th": "มีคนหรือสิ่งของอะไรบ้างในภาพ?",
+                "ko": "이 이미지에 누가 있나요?",
+                "vi": "Có ai hoặc cái gì trong hình ảnh?",
+                "hu": "Ki vagy mi van a képen?",
+                "cs": "Kdo nebo co je na obrázku?",
+                "sr": "Ко је или шта је на слици?"
+            }
+        },
+        {
+            "id": 23,
+            "image-type": "image-text-pair",
+            "prompt": {
+                "cn": "介绍这张图片？",
+                "ar": "قدم الصورة",
+                "ru": "Представьте это изображение",
+                "th": "แนะนำภาพนี้",
+                "ko": "이 이미지를 소개해주세요",
+                "vi": "Giới thiệu hình ảnh này",
+                "hu": "Bemutatnád ezt a képet?",
+                "cs": "Představte tento obrázek",
+                "sr": "Представите ову слику"
+            }
         }
     ]
 }
