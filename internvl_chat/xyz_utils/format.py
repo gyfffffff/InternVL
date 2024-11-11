@@ -45,6 +45,7 @@ def format(args):
     save_path = args.save_path
     image_safe_file = args.image_safe_file
     version = args.version
+    data_length = args.data_length
 
     image_save_path = args.image_save_path
 
@@ -60,7 +61,7 @@ def format(args):
         img_name = data['image']['path'].split('/')[-1].split('.')[0]
         if img_name not in image_safe_set:
             continue
-        if i > 50000:
+        if i > data_length:
             break
         img_format = data['image']['format'].lower()
         data_item['image'] = f'{image_save_path}/{language}/{image_type}/{img_name}'
@@ -97,6 +98,7 @@ if __name__ == "__main__":
     argparser.add_argument('--image_safe_file', type=str)
     argparser.add_argument('--version', type=str)
     argparser.add_argument('--image_save_path', type=str)
+    argparser.add_argument('--data_length', type=int)
     args = argparser.parse_args()
 
     format(args)

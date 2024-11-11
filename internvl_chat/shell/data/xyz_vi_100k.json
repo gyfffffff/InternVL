@@ -1,9 +1,9 @@
 {
     "ar-image-text-pair-v2": {
         "root": "/mnt/workspace/gaoyufei/xyz_v2_data/ar/image_text_pair",
-        "annotation": "xyz_data/ar/preprocessed_newprompt_50k_image_release_v2_ar_image_text_pair_json_in_part-671a196bab97-000000.jsonl",
+        "annotation": "xyz_data/vi/preprocessed_100000_image_release_v2_vi_image_text_pair_json_in_part-671a1733cf93-000000.jsonl",
         "data_augment": false,
         "repeat_time": 1,
-        "length": 50001
+        "length": 100001
     }
 }
