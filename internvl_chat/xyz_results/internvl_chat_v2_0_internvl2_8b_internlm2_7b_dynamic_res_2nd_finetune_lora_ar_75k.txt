@@ -1,5 +1,5 @@
 ['slvqa_ar_nlg', {'B-2': 0.05555555555555555}]
-['slvqa_ar_nlg', {'M': 0.17865881472337533}]
-['slvqa_ar_nlg', {'R': 0.3059082853396826}]
-['slvqa_ar_nlg', {'S': tensor(0.1521, dtype=torch.float64)}]
+['slvqa_ar_nlg', {'M': 0.1771428066455971}]
+['slvqa_ar_nlg', {'R': 0.25866272089565245}]
+['slvqa_ar_nlg', {'S': tensor(0.1151, dtype=torch.float64)}]
 ['slvqa_ar_nlg', {'C': tensor(0., dtype=torch.float64)}]
