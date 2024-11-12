@@ -88,7 +88,19 @@ image_save_path="/mnt/workspace/gaoyufei/xyz_v2_data"
 
 # cs v2
 jsonl_name="image_release_v2_cs_image_text_pair_json_in_part-671b4e4002a4-000000.jsonl"
-data_length=25000
+data_length=50000
+python xyz_utils/format.py \
+    --image_jsonl /mnt/workspace/gaoyufei/InternVL/internvl_chat/xyz_data/cs/${jsonl_name} \
+    --language cs \
+    --prompt_path /mnt/workspace/gaoyufei/InternVL/internvl_chat/xyz_utils/prompt.json \
+    --save_path /mnt/workspace/gaoyufei/InternVL/internvl_chat/xyz_data/cs/preprocessed_newprompt_${data_length}_${jsonl_name} \
+    --image_safe_file /mnt/workspace/gaoyufei/InternVL/internvl_chat/xyz_data/cs/image_text_pair_save.txt \
+    --version  "" \
+    --image_save_path ${image_save_path} \
+    --data_length ${data_length}
+
+jsonl_name="image_release_v2_cs_image_text_pair_json_in_part-671b4e4002a4-000000.jsonl"
+data_length=100000
 python xyz_utils/format.py \
     --image_jsonl /mnt/workspace/gaoyufei/InternVL/internvl_chat/xyz_data/cs/${jsonl_name} \
     --language cs \

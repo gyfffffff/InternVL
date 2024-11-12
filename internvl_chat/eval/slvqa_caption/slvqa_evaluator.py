@@ -287,10 +287,14 @@ class SLVQANLGEvaluator:
             pred_answer = self.answer_processor(entry["answer"])
             gt_answer = entry['annotation']
             question_id = entry['question_id']
-            scores["B-1"][question_id] = self.compute_bleu_score(pred_answer, gt_answer)
-            scores["M"][question_id] = self.compute_meteor_score(pred_answer, gt_answer)
-            scores["R"][question_id] = self.compute_rouge_score(pred_answer, gt_answer)
-            scores["S"][question_id], scores["C"][question_id] = self.compute_spice_cider_score(pred_answer, gt_answer)
+            # scores["B-1"][question_id] = self.compute_bleu_score(pred_answer, gt_answer)
+            # scores["M"][question_id] = self.compute_meteor_score(pred_answer, gt_answer)
+            # scores["R"][question_id] = self.compute_rouge_score(pred_answer, gt_answer)
+            # scores["S"][question_id], scores["C"][question_id] = self.compute_spice_cider_score(pred_answer, gt_answer)
+            scores["B-1"][question_id] = 0
+            scores["M"][question_id] = 0
+            scores["R"][question_id] = 0
+            scores["S"][question_id], scores["C"][question_id] = 0, 0
 
         average_scores = {}
         for metric in ["B-1", "M", "R", "S", "C"]:

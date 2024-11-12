@@ -67,7 +67,7 @@ class VQADataset(torch.utils.data.Dataset):
 
     def __getitem__(self, idx):
         data = self.data[idx]
-        question_id = data['id']
+        question_id = data['image']
         question = data['question']
         annotation = data.get('caption', None)
         root_dir = "/mnt/workspace/gaoyufei/InternVL/internvl_chat/data/SLVQA/CAPTION/caption_imgs"
@@ -156,7 +156,7 @@ def evaluate_chat_model():
                 min_new_tokens=1,
                 do_sample=True if args.temperature > 0 else False,
                 temperature=args.temperature,
-                max_new_tokens=150,
+                max_new_tokens=1000,
             )
             pred = model.chat(
                 tokenizer=tokenizer,

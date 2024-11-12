@@ -1,0 +1,5 @@
+['slvqa_caption', {'B-1': 0.0}]
+['slvqa_caption', {'M': 0.0}]
+['slvqa_caption', {'R': 0.0}]
+['slvqa_caption', {'S': 0.0}]
+['slvqa_caption', {'C': 0.0}]
