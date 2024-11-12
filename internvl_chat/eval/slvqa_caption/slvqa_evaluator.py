@@ -247,7 +247,7 @@ class SLVQANLGEvaluator:
 
     def compute_bleu_score(self, pred_answer, gt_answer):
         from nltk.translate.bleu_score import sentence_bleu
-        return sentence_bleu([gt_answer.split()], pred_answer.split(), weights=(1.0))
+        return sentence_bleu([gt_answer.split()], pred_answer.split(), weights=(0.5, 0.5))
 
     def compute_meteor_score(self, pred_answer, gt_answer):
         from nltk.translate.meteor_score import meteor_score

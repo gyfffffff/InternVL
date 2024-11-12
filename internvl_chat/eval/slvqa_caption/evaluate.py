@@ -17,7 +17,7 @@ from tqdm import tqdm
 
 ds_collections = {
     'slvqa_caption': {
-        'test': 'data/SLVQA/CAPTION/val.jsonl',
+        'test': 'data/SLVQA/AR/ImgDesc/val.jsonl',
         'metric': 'slvqa_gen_score',
     }
 }
@@ -67,9 +67,11 @@ class VQADataset(torch.utils.data.Dataset):
 
     def __getitem__(self, idx):
         data = self.data[idx]
+        question_id = data['id']
         question = data['question']
         annotation = data.get('caption', None)
-        image = data['image']
+        root_dir = "/mnt/workspace/gaoyufei/InternVL/internvl_chat/data/SLVQA/CAPTION/caption_imgs"
+        image = os.path.join(root_dir, data['image'])
         image = Image.open(image).convert('RGB')
         if self.dynamic_image_size:
             images = dynamic_preprocess(image, image_size=self.input_size,
