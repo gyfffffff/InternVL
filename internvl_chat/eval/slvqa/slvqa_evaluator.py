@@ -247,7 +247,7 @@ class SLVQANLGEvaluator:
 
     def compute_bleu_score(self, pred_answer, gt_answer):
         from nltk.translate.bleu_score import sentence_bleu
-        return sentence_bleu([gt_answer.split()], pred_answer.split(), weights=(0.5, 0.5))
+        return sentence_bleu([gt_answer.split()], pred_answer.split(), weights=(1.0))
 
     def compute_meteor_score(self, pred_answer, gt_answer):
         from nltk.translate.meteor_score import meteor_score
@@ -270,7 +270,7 @@ class SLVQANLGEvaluator:
 
     def eval_pred_list(self, pred_list):
         # slvqa_gen_score:
-        # - B-2 (BLEU-2)
+        # - B-1 (BLEU-1)
         # - M (METEOR)
         # - R (ROUGE-L)
         # - S (SPICE)
@@ -279,7 +279,7 @@ class SLVQANLGEvaluator:
         # pred_list:
         # [{"question_id": , "question": "", "answer": "", "annotation": ""}, {...}, ...]
         scores = {}
-        for metric in ["B-2", "M", "R", "S", "C"]:
+        for metric in ["B-1", "M", "R", "S", "C"]:
             scores[metric] = {}  # question_id, score
 
 
@@ -287,13 +287,13 @@ class SLVQANLGEvaluator:
             pred_answer = self.answer_processor(entry["answer"])
             gt_answer = entry['annotation']
             question_id = entry['question_id']
-            scores["B-2"][question_id] = self.compute_bleu_score(pred_answer, gt_answer)
+            scores["B-1"][question_id] = self.compute_bleu_score(pred_answer, gt_answer)
             scores["M"][question_id] = self.compute_meteor_score(pred_answer, gt_answer)
             scores["R"][question_id] = self.compute_rouge_score(pred_answer, gt_answer)
             scores["S"][question_id], scores["C"][question_id] = self.compute_spice_cider_score(pred_answer, gt_answer)
 
         average_scores = {}
-        for metric in ["B-2", "M", "R", "S", "C"]:
+        for metric in ["B-1", "M", "R", "S", "C"]:
             average_scores[metric] = sum(scores[metric].values()) / len(scores[metric])
 
         return average_scores, scores

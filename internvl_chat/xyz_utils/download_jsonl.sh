@@ -12,17 +12,24 @@
 #     --jsonl_path image/release/sr/image_text_pair/json_in/part-67065fe92bdb-000000.jsonl\
 #     --save_path /mnt/workspace/gaoyufei/InternVL/internvl_chat/xyz_data \
 
-# ar v2
-python xyz_utils/download_jsonl.py \
-    --language ar \
-    --image_type image_text_pair \
-    --jsonl_path image/release_v2/ar/image_text_pair/json_in/part-671a196bab97-000000.jsonl \
-    --save_path /mnt/workspace/gaoyufei/InternVL/internvl_chat/xyz_data \
+# # ar v2
+# python xyz_utils/download_jsonl.py \
+#     --language ar \
+#     --image_type image_text_pair \
+#     --jsonl_path image/release_v2/ar/image_text_pair/json_in/part-671a196bab97-000000.jsonl \
+#     --save_path /mnt/workspace/gaoyufei/InternVL/internvl_chat/xyz_data \
 
 
-# vi v2
+# # vi v2
+# python xyz_utils/download_jsonl.py \
+#     --language vi \
+#     --image_type image_text_pair \
+#     --jsonl_path image/release_v2/vi/image_text_pair/json_in/part-671a1733cf93-000000.jsonl \
+#     --save_path /mnt/workspace/gaoyufei/InternVL/internvl_chat/xyz_data \
+
+# cs v2
 python xyz_utils/download_jsonl.py \
-    --language vi \
+    --language cs \
     --image_type image_text_pair \
-    --jsonl_path image/release_v2/vi/image_text_pair/json_in/part-671a1733cf93-000000.jsonl \
+    --jsonl_path image/release_v2/cs/image_text_pair/json_in/part-671b4e4002a4-000000.jsonl \
     --save_path /mnt/workspace/gaoyufei/InternVL/internvl_chat/xyz_data \

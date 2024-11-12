@@ -50,8 +50,8 @@ def format(args):
     image_save_path = args.image_save_path
 
     image_safe_set = set()
-    with open(image_safe_file, 'r') as f:
-        image_safe_set = set([line.strip().split('/')[-1].split('.')[0] for line in f.readlines()])
+    # with open(image_safe_file, 'r') as f:
+    #     image_safe_set = set([line.strip().split('/')[-1].split('.')[0] for line in f.readlines()])
     with open(image_jsonl, 'r') as f:
         raw_data = [json.loads(line) for line in f.readlines()]
 
@@ -59,8 +59,8 @@ def format(args):
         data_item = {}
         data_item['id'] = i
         img_name = data['image']['path'].split('/')[-1].split('.')[0]
-        if img_name not in image_safe_set:
-            continue
+        # if img_name not in image_safe_set:
+        #     continue
         if i > data_length:
             break
         img_format = data['image']['format'].lower()
