@@ -1,0 +1,146 @@
+[
+    {
+        "question_id": 2,
+        "question": "Jak se náměstí jmenuje? Odpovězte jedním slovem nebo frází.",
+        "answer": "Václavské náměstí",
+        "annotation": "Pražské náměstí"
+    },
+    {
+        "question_id": 3,
+        "question": "Jak se náměstí jmenuje? Odpovězte jedním slovem nebo frází.",
+        "answer": "Náměstí Staroměstské",
+        "annotation": "Pražské náměstí"
+    },
+    {
+        "question_id": 4,
+        "question": "Jak se náměstí jmenuje? Odpovězte jedním slovem nebo frází.",
+        "answer": "Náměstí Republiky",
+        "annotation": "Pražské náměstí"
+    },
+    {
+        "question_id": 5,
+        "question": "Jak se náměstí jmenuje? Odpovězte jedním slovem nebo frází.",
+        "answer": "Náměstí Svobody",
+        "annotation": "Pražské náměstí"
+    },
+    {
+        "question_id": 6,
+        "question": "Jaká je událost na obrázku? Odpovězte slovem nebo frází.",
+        "answer": "V roce 1989 se zhruba 1,5 milionu většině českých obyvatel země zúčastnilo otevření západních přesvědčených částí západních částí západních částí západních částí západních částí západních částí západních částí západních částí zá",
+        "annotation": "pád berlínské zdi"
+    },
+    {
+        "question_id": 10,
+        "question": "kdo je tato osoba? Odpovězte slovem nebo frází.",
+        "answer": "Jan Čenský",
+        "annotation": "Zelenského"
+    },
+    {
+        "question_id": 14,
+        "question": "kdo je tato osoba? Odpovězte slovem nebo frází.",
+        "answer": "Jana Šťastná",
+        "annotation": "Kateřina Brožová"
+    },
+    {
+        "question_id": 15,
+        "question": "kdo je tato osoba? Odpovězte slovem nebo frází.",
+        "answer": "Jana Šťastná",
+        "annotation": "Kateřina Brožová"
+    },
+    {
+        "question_id": 16,
+        "question": "kdo je tato osoba? Odpovězte slovem nebo frází.",
+        "answer": "Jana Šťastná",
+        "annotation": "Dáda Patrasová"
+    },
+    {
+        "question_id": 17,
+        "question": "kdo je tato osoba? Odpovězte slovem nebo frází.",
+        "answer": "Jana Šťastná",
+        "annotation": "Dáda Patrasová"
+    },
+    {
+        "question_id": 18,
+        "question": "kdo je tato osoba? Odpovězte slovem nebo frází.",
+        "answer": "Dagmar Havlová",
+        "annotation": "Dáda Patrasová"
+    },
+    {
+        "question_id": 19,
+        "question": "Jak se jmenuje?",
+        "answer": "Kateřina Brožová",
+        "annotation": "Iveta Bartošová"
+    },
+    {
+        "question_id": 20,
+        "question": "Jak se jmenuje?",
+        "answer": "Kateřina Brožová",
+        "annotation": "Iveta Bartošová"
+    },
+    {
+        "question_id": 21,
+        "question": "Jak se jmenuje?",
+        "answer": "Kateřina Brožová",
+        "annotation": "Iveta Bartošová"
+    },
+    {
+        "question_id": 22,
+        "question": "Jak se jmenuje?",
+        "answer": "Kateřina Brožová",
+        "annotation": "Iveta Bartošová"
+    },
+    {
+        "question_id": 23,
+        "question": "O které město se jedná? Odpovězte jedním slovem nebo frází.",
+        "answer": "Kutná Hora",
+        "annotation": "Kladno"
+    },
+    {
+        "question_id": 24,
+        "question": "O které město se jedná? Odpovězte jedním slovem nebo frází.",
+        "answer": "Kutná Hora",
+        "annotation": "Kladno"
+    },
+    {
+        "question_id": 25,
+        "question": "O které město se jedná? Odpovězte jedním slovem nebo frází.",
+        "answer": "Praha",
+        "annotation": "Prahu"
+    },
+    {
+        "question_id": 26,
+        "question": "O které město se jedná? Odpovězte jedním slovem nebo frází.",
+        "answer": "Praha",
+        "annotation": "Prahu"
+    },
+    {
+        "question_id": 27,
+        "question": "O které město se jedná? Odpovězte jedním slovem nebo frází.",
+        "answer": "Praha",
+        "annotation": "Prahu"
+    },
+    {
+        "question_id": 28,
+        "question": "O které město se jedná? Odpovězte jedním slovem nebo frází.",
+        "answer": "Praha",
+        "annotation": "Prahu"
+    },
+    {
+        "question_id": 29,
+        "question": "O které město se jedná? Odpovězte jedním slovem nebo frází.",
+        "answer": "Praha",
+        "annotation": "Karlovy Vary"
+    },
+    {
+        "question_id": 30,
+        "question": "O které město se jedná? Odpovězte jedním slovem nebo frází.",
+        "answer": "Praha",
+        "annotation": "Karlovy Vary"
+    },
+    {
+        "question_id": 31,
+        "question": "O které město se jedná? Odpovězte jedním slovem nebo frází.",
+        "answer": "Praha",
+        "annotation": "Karlovy Vary"
+    }
+]

@@ -31,7 +31,11 @@ ds_collections = {
     'slvqa_vi_nlg': {
         'test': 'data/SLVQA/VI/NLG/val.jsonl',
         'metric': 'slvqa_gen_score',
-    }
+    },
+    'slvqa_cs_nlg': {
+        'test': 'data/SLVQA/CS/NLG/val.jsonl',
+        'metric': 'slvqa_gen_score'
+    },
 }
 
 def evaluate_exact_match_accuracy(entries):

@@ -1,0 +1,74 @@
+[
+    {
+        "question_id": 1,
+        "question": "Která banka? Odpovězte prosím jedním slovem nebo frází.",
+        "answer": "Česká národní banka",
+        "annotation": "česká národní banka"
+    },
+    {
+        "question_id": 2,
+        "question": "Jak se náměstí jmenuje? Odpovězte jedním slovem nebo frází.",
+        "answer": "Pražské náměstí",
+        "annotation": "Pražské náměstí"
+    },
+    {
+        "question_id": 3,
+        "question": "Jak se náměstí jmenuje? Odpovězte jedním slovem nebo frází.",
+        "answer": "Náměstí Svobody",
+        "annotation": "Pražské náměstí"
+    },
+    {
+        "question_id": 4,
+        "question": "Jak se náměstí jmenuje? Odpovězte jedním slovem nebo frází.",
+        "answer": "Náměstí Staré Město",
+        "annotation": "Pražské náměstí"
+    },
+    {
+        "question_id": 5,
+        "question": "Jak se náměstí jmenuje? Odpovězte jedním slovem nebo frází.",
+        "answer": "Náměstí Svobody",
+        "annotation": "Pražské náměstí"
+    },
+    {
+        "question_id": 6,
+        "question": "Jaká je událost na obrázku? Odpovězte slovem nebo frází.",
+        "answer": "Berlin 1989",
+        "annotation": "柏林墙倒塌"
+    },
+    {
+        "question_id": 7,
+        "question": "Jak se jmenuje?",
+        "answer": "Jana Šťastná",
+        "annotation": "Heidi Janků"
+    },
+    {
+        "question_id": 8,
+        "question": "Jak se jmenuje?",
+        "answer": "Jana Šťastná",
+        "annotation": "Heidi Janků"
+    },
+    {
+        "question_id": 9,
+        "question": "Jak se jmenuje?",
+        "answer": "Jana Šťastná",
+        "annotation": "Heidi Janků"
+    },
+    {
+        "question_id": 10,
+        "question": "kdo je tato osoba? Odpovězte slovem nebo frází.",
+        "answer": "Pavel Bureš",
+        "annotation": ""
+    },
+    {
+        "question_id": 11,
+        "question": "kdo je tato osoba? Odpovězte slovem nebo frází.",
+        "answer": "David Beckham",
+        "annotation": ""
+    },
+    {
+        "question_id": 12,
+        "question": "kdo je tato osoba? Odpovězte slovem nebo frází.",
+        "answer": "Jana Šťastná",
+        "annotation": ""
+    }
+]
