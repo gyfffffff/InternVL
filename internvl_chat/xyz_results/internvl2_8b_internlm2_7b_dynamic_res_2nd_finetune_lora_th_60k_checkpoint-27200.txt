@@ -1,0 +1,5 @@
+['slvqa_th_nlg', {'B-1': 0.0}]
+['slvqa_th_nlg', {'M': 0.0}]
+['slvqa_th_nlg', {'R': 0.0}]
+['slvqa_th_nlg', {'S': 0.0}]
+['slvqa_th_nlg', {'C': 0.0}]

@@ -55,14 +55,18 @@ def format(args):
     with open(image_jsonl, 'r') as f:
         raw_data = [json.loads(line) for line in f.readlines()]
 
+    total_data = 0
+    images_we_have = set(os.listdir("/mnt/workspace/gaoyufei/xyz_v2_data/th/image_text_pair"))
     for i, data in enumerate(raw_data):
         data_item = {}
         data_item['id'] = i
         img_name = data['image']['path'].split('/')[-1].split('.')[0]
         # if img_name not in image_safe_set:
         #     continue
-        if i > data_length:
+        if total_data > data_length:
             break
+        if img_name not in images_we_have:
+            continue
         img_format = data['image']['format'].lower()
         data_item['image'] = f'{image_save_path}/{language}/{image_type}/{img_name}'
         data_item['width'] = data['image']['resolution'][0] 
@@ -85,6 +89,7 @@ def format(args):
         with open(save_path, 'a+') as f:
             f.write(json.dumps(data_item, ensure_ascii=False))
             f.write('\n')
+        total_data += 1
     return 
 
 if __name__ == "__main__":

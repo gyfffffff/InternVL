@@ -24,9 +24,9 @@ ds_collections = {
         'test': 'data/SLVQA/AR/NLG/val.jsonl',
         'metric': 'slvqa_gen_score',
     },
-    'slvqa_vi_vqa': {
-        'test': 'data/SLVQA/VI/VQA/val.jsonl',
-        'metric': 'accuracy',
+    'slvqa_th_nlg': {
+        'test': 'data/SLVQA/TH/NLG/val.jsonl',
+        'metric': 'slvqa_gen_score',
     },
     'slvqa_vi_nlg': {
         'test': 'data/SLVQA/VI/NLG/val.jsonl',

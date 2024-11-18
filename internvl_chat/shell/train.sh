@@ -18,8 +18,13 @@
 # cd /mnt/workspace/gaoyufei/InternVL/internvl_chat
 # GPUS=2 PER_DEVICE_BATCH_SIZE=2 bash shell/internvl2.0/2nd_finetune/internvl2_8b_internlm2_7b_dynamic_res_2nd_finetune_lora_ar_caption_100k.sh
 
+# GPUS=2 PER_DEVICE_BATCH_SIZE=2 bash shell/internvl2.0/2nd_finetune/internvl2_8b_internlm2_7b_dynamic_res_2nd_finetune_lora_cs_25k.sh
+# GPUS=2 PER_DEVICE_BATCH_SIZE=2 bash shell/internvl2.0/2nd_finetune/internvl2_8b_internlm2_7b_dynamic_res_2nd_finetune_lora_cs_50k.sh
+# GPUS=2 PER_DEVICE_BATCH_SIZE=2 bash shell/internvl2.0/2nd_finetune/internvl2_8b_internlm2_7b_dynamic_res_2nd_finetune_lora_cs_100k.sh
+
+
+
+# GPUS=2 PER_DEVICE_BATCH_SIZE=2 bash shell/internvl2.0/2nd_finetune/internvl2_8b_internlm2_7b_dynamic_res_2nd_finetune_lora_th_60k.sh
 GPUS=2 PER_DEVICE_BATCH_SIZE=2 bash shell/internvl2.0/2nd_finetune/internvl2_8b_internlm2_7b_dynamic_res_2nd_finetune_lora_cs_25k.sh
-GPUS=2 PER_DEVICE_BATCH_SIZE=2 bash shell/internvl2.0/2nd_finetune/internvl2_8b_internlm2_7b_dynamic_res_2nd_finetune_lora_cs_50k.sh
-GPUS=2 PER_DEVICE_BATCH_SIZE=2 bash shell/internvl2.0/2nd_finetune/internvl2_8b_internlm2_7b_dynamic_res_2nd_finetune_lora_cs_100k.sh
 
-
+# GPUS=2 PER_DEVICE_BATCH_SIZE=2 bash shell/internvl2.0/2nd_finetune/internvl2_8b_internlm2_7b_dynamic_res_2nd_finetune_lora_th_90k.sh
