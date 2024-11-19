@@ -21,6 +21,7 @@
 import argparse
 import json
 import random
+import os
 
 def sample_prompt(prompt_path, prompt_randomseed, language):
     with open(prompt_path, 'r') as f:
@@ -47,13 +48,16 @@ def format(args):
         caption_dict[caption['img_id']] = caption['caption']
     with open(image_jsonl, 'r') as f:
         raw_data = [json.loads(line) for line in f.readlines()]
+    data_num = 0
     for i, data in enumerate(raw_data):
-        if i > data_length:
+        if data_num > data_length:
             break
         data_item = {}
         data_item['id'] = i
         img_name = data['image']['path'].split('/')[-1].split('.')[0]
         data_item['image'] = f'{image_save_path}/{language}/{image_type}/{img_name}'
+        if os.path.exists(data_item['image']) == False:
+            continue
         data_item['width'] = data['image']['resolution'][0]
         data_item['height'] = data['image']['resolution'][1]
         conversations = []
@@ -77,6 +81,7 @@ def format(args):
         with open(save_path, 'a+') as f:
             f.write(json.dumps(data_item, ensure_ascii=False))
             f.write('\n')
+        data_num += 1
     return 
 
 

@@ -1,0 +1,98 @@
+[
+    {
+        "question_id": 1,
+        "question": "สถานที่นี้คืออะไร? ตอบด้วยคำหรือวลีเดียว",
+        "answer": "มิติแปลก! ประจำจังหวัดสุพรรณบุรี อย่างเป็นทางการ ต้องถูกต้องอ่าน แล้วถูกขโมย",
+        "annotation": "บานาฮิลส์"
+    },
+    {
+        "question_id": 8,
+        "question": "สะพานนี้เป็นแบบไหนคะ? ตอบด้วยคำหรือวลีเดียว",
+        "answer": "ราวอธิษฐาน ณ เมืองกันตัง",
+        "annotation": "กาญจนบุรี, สะพานข้ามแม่น้ำแคว"
+    },
+    {
+        "question_id": 9,
+        "question": "สะพานนี้เป็นแบบไหนคะ? ตอบด้วยคำหรือวลีเดียว",
+        "answer": "โครงการ แหล่งไฟฟ้าใต้ดิน (Underground Power Station) ที่แห่งชาติ เมืองฮานอย ประเทศเวียดนาม",
+        "annotation": "สะพานภูมิพล"
+    },
+    {
+        "question_id": 10,
+        "question": "สถานที่นี้คืออะไร? ตอบด้วยคำหรือวลีเดียว",
+        "answer": "พระที่นั่งวังเวชชาญ รัชกาลที่ 9",
+        "annotation": "ทำเนียบรัฐบาลไทย"
+    },
+    {
+        "question_id": 11,
+        "question": "",
+        "answer": "ญาญ่า ณิชาภัทร",
+        "annotation": "สุชาติ สวัสดิ์ศรี"
+    },
+    {
+        "question_id": 12,
+        "question": "",
+        "answer": "Irina Karama, ผู้สมัครใหญ่ พรรคอนาคตใหม่, ปัจจุบันเป็นผู้นำฝ่ายค้านในสภา",
+        "annotation": "สุชาติ สวัสดิ์ศรี"
+    },
+    {
+        "question_id": 13,
+        "question": "",
+        "answer": "The Grand Palace – Bangkok, Thailand",
+        "annotation": "สุชาติ สวัสดิ์ศรี"
+    },
+    {
+        "question_id": 14,
+        "question": "",
+        "answer": "The Songkran festival, also known as the Thai New Year, is celebrated with great enthusiasm and joy. One of the most popular ways to celebrate is by splashing water on each other, symbolizing the washing away of bad luck and sins from the past year. This tradition is deeply rooted in Thai culture and is a time for families and friends to come together and enjoy the festivities.",
+        "annotation": "สุชาติ สวัสดิ์ศรี"
+    },
+    {
+        "question_id": 15,
+        "question": "",
+        "answer": "Thai Songkran – the festival of water – is celebrated on 15th April every year.",
+        "annotation": "สุชาติ สวัสดิ์ศรี"
+    },
+    {
+        "question_id": 16,
+        "question": "",
+        "answer": "Buddha To Go 计划将寺庙带到人们家中，以缓解封锁带来的压力。",
+        "annotation": "สุชาติ สวัสดิ์ศรี"
+    },
+    {
+        "question_id": 17,
+        "question": "",
+        "answer": "The Great Buddha of Phra Pradaeng (ของผู้หญิง)",
+        "annotation": "สุชาติ สวัสดิ์ศรี"
+    },
+    {
+        "question_id": 2,
+        "question": "วันหยุดนี้คืออะไร? ตอบด้วยคำหรือวลีเดียว",
+        "answer": "เทศกาลโคลน10",
+        "annotation": "เทศกาลโคลน"
+    },
+    {
+        "question_id": 3,
+        "question": "เขาชื่ออะไร? ตอบด้วยคำหรือวลีเดียว",
+        "answer": "โคโรนา",
+        "annotation": "เซเลนสกี้"
+    },
+    {
+        "question_id": 5,
+        "question": "นี่คือแม่น้ำแบบไหน? ตอบด้วยคำหรือวลีเดียว",
+        "answer": "แม่น้ำมะละกา",
+        "annotation": "แม่น้ำมะละกา"
+    },
+    {
+        "question_id": 6,
+        "question": "สถานที่นี้คืออะไร? ตอบด้วยคำหรือวลีเดียว",
+        "answer": "โคลอสเซียม สังเวียนเดือด นักสู้โรมันผู้ยิ่งใหญ่!",
+        "annotation": "โคลอสเซียม"
+    },
+    {
+        "question_id": 7,
+        "question": "นี่คืออะไร? ตอบด้วยคำหรือวลีเดียว",
+        "answer": "พระพิฆเนศ",
+        "annotation": "พระพิฆเนศ"
+    }
+]

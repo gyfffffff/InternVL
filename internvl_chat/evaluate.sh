@@ -649,7 +649,7 @@ if [ ${DATASET} == "slvqa" ]; then
         --master_addr=127.0.0.1 \
         --nproc_per_node=${GPUS} \
         --master_port=${MASTER_PORT} \
-        eval/slvqa/evaluate.py --checkpoint ${CHECKPOINT} --datasets slvqa_th_nlg  "${ARGS[@]:2}"
+        eval/slvqa/evaluate.py --checkpoint ${CHECKPOINT} --datasets slvqa_ar_nlg  "${ARGS[@]:2}"
 fi
 
 if [ ${DATASET} == "slvqa_caption" ]; then
@@ -659,5 +659,5 @@ if [ ${DATASET} == "slvqa_caption" ]; then
         --master_addr=127.0.0.1 \
         --nproc_per_node=${GPUS} \
         --master_port=${MASTER_PORT} \
-        eval/slvqa_caption/evaluate.py --checkpoint ${CHECKPOINT} --datasets slvqa_caption --temperature 0.5 "${ARGS[@]:2}"
+        eval/slvqa_caption/evaluate.py --checkpoint ${CHECKPOINT} --datasets slvqa_caption_ru --temperature 0.5 "${ARGS[@]:2}"
 fi

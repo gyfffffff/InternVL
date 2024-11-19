@@ -14,8 +14,14 @@ def move_files(src_dir, dest_dir):
             print(f"文件 {filename} 已移动到 {dest_dir}。")
 
 # 设置源目录和目标目录
-source_directory = '/mnt/workspace/gaoyufei/xyz_v2_data/th'  # 替换为你的源目录路径
-destination_directory = '/mnt/workspace/gaoyufei/xyz_v2_data/th/image_text_pair'  # 替换为你的目标目录路径
+source_directory1 = '/mnt/workspace/feijiaying/InternVL/examples/sr/v001/image_pure'  # 替换为你的源目录路径
+source_directory2 = '/mnt/workspace/feijiaying/InternVL/examples/sr/v002/image_pure'  # 替换为你的源目录路径
+source_directory3 = '/mnt/workspace/feijiaying/InternVL/examples/sr/v003/image_pure'  # 替换为你的源目录路径
+source_directory4 = '/mnt/workspace/feijiaying/InternVL/examples/sr/v004/image_pure'  # 替换为你的源目录路径
+# source_directory5 = '/mnt/workspace/feijiaying/InternVL/examples/sr/v005/image_pure'  # 替换为你的源目录路径
+source_directory6 = '/mnt/workspace/feijiaying/InternVL/examples/sr/v006/image_pure'  # 替换为你的源目录路径
+destination_directory = '/mnt/workspace/gaoyufei/xyz_v2_data/sr/image_pure/'  # 替换为你的目标目录路径
 
 # 调用函数移动文件
-move_files(source_directory, destination_directory)
+for source_directory in [source_directory1, source_directory2, source_directory3, source_directory4, source_directory6]:
+    move_files(source_directory, destination_directory)

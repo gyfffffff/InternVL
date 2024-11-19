@@ -245,28 +245,31 @@ class SLVQANLGEvaluator:
 
         return unique_answer_scores       
 
-    def compute_bleu_score(self, pred_answer, gt_answer):
-        from nltk.translate.bleu_score import sentence_bleu
-        return sentence_bleu([gt_answer.split()], pred_answer.split(), weights=(0.5, 0.5))
+    # def compute_bleu_score(self, pred_answer, gt_answer):
+    #     from nltk.translate.bleu_score import sentence_bleu
+    #     return sentence_bleu([gt_answer.split()], pred_answer.split(), weights=(0.5, 0.5))
 
-    def compute_meteor_score(self, pred_answer, gt_answer):
-        from nltk.translate.meteor_score import meteor_score
-        print(f"pred_answer: {pred_answer}, gt_answer: {gt_answer}")
-        return meteor_score([gt_answer.split()], pred_answer.split())
+    # def compute_meteor_score(self, pred_answer, gt_answer):
+    #     from nltk.translate.meteor_score import meteor_score
+    #     print(f"pred_answer: {pred_answer}, gt_answer: {gt_answer}")
+    #     return meteor_score([gt_answer.split()], pred_answer.split())
 
-    def compute_rouge_score(self, pred_answer, gt_answer):
-        from rouge import Rouge
-        rouger = Rouge()
-        scores = rouger.get_scores(pred_answer, gt_answer)
-        return scores[0]['rouge-l']['f']
+    # def compute_rouge_score(self, pred_answer, gt_answer):
+    #     from rouge import Rouge
+    #     rouger = Rouge()
+    #     scores = rouger.get_scores(pred_answer, gt_answer)
+    #     return scores[0]['rouge-l']['f']
 
-    def compute_spice_cider_score(self, pred_answer, gt_answer):
+    # def compute_spice_cider_score(self, pred_answer, gt_answer):
+    #     from aac_metrics import evaluate
+    #     corpus_scores, _ = evaluate([pred_answer, pred_answer], [[gt_answer], [gt_answer]])
+    #     print(corpus_scores)
+    #     return corpus_scores['spice'], corpus_scores['cider_d']
+    def get_scores(self, pred_answer, gt_answer):
         from aac_metrics import evaluate
         corpus_scores, _ = evaluate([pred_answer, pred_answer], [[gt_answer], [gt_answer]])
         print(corpus_scores)
-        return corpus_scores['spice'], corpus_scores['cider_d']
-        
-
+        return corpus_scores
 
     def eval_pred_list(self, pred_list):
         # slvqa_gen_score:
@@ -287,15 +290,14 @@ class SLVQANLGEvaluator:
             pred_answer = self.answer_processor(entry["answer"])
             gt_answer = entry['annotation']
             question_id = entry['question_id']
-            # scores["B-1"][question_id] = self.compute_bleu_score(pred_answer, gt_answer)
-            # scores["M"][question_id] = self.compute_meteor_score(pred_answer, gt_answer)
-            # scores["R"][question_id] = self.compute_rouge_score(pred_answer, gt_answer)
-            # scores["S"][question_id], scores["C"][question_id] = self.compute_spice_cider_score(pred_answer, gt_answer)
-            scores["B-1"][question_id] = 0
-            scores["M"][question_id] = 0
-            scores["R"][question_id] = 0
-            scores["S"][question_id], scores["C"][question_id] = 0, 0
 
+            computec_scores = self.get_scores(pred_answer, gt_answer)
+            scores["B-1"][question_id] = round(computec_scores['bleu_1'].item(), 4)
+            scores["M"][question_id] = round(computec_scores['meteor'].item(), 4)
+            scores["R"][question_id] = round(computec_scores['rouge_l'].item(), 4)
+            scores["S"][question_id] = round(computec_scores['spice'].item(), 4)
+            scores["C"][question_id] = round(computec_scores['cider_d'].item(), 4)
+            
         average_scores = {}
         for metric in ["B-1", "M", "R", "S", "C"]:
             average_scores[metric] = sum(scores[metric].values()) / len(scores[metric])

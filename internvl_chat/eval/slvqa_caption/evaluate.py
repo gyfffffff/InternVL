@@ -16,10 +16,14 @@ from slvqa_evaluator import SLVQANLGEvaluator
 from tqdm import tqdm
 
 ds_collections = {
-    'slvqa_caption': {
+    'slvqa_caption_ar': {
         'test': 'data/SLVQA/AR/ImgDesc/val.jsonl',
         'metric': 'slvqa_gen_score',
-    }
+    },
+    'slvqa_caption_ru': {
+        'test': 'data/SLVQA/RU/ImgDesc/val.jsonl',
+        'metric': 'slvqa_gen_score',
+    },    
 }
 
 
@@ -156,7 +160,7 @@ def evaluate_chat_model():
                 min_new_tokens=1,
                 do_sample=True if args.temperature > 0 else False,
                 temperature=args.temperature,
-                max_new_tokens=1000,
+                max_new_tokens=1200,
             )
             pred = model.chat(
                 tokenizer=tokenizer,
