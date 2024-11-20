@@ -28,3 +28,8 @@
 ['slvqa_th_nlg', {'R': 0.0}]
 ['slvqa_th_nlg', {'S': 0.0}]
 ['slvqa_th_nlg', {'C': 0.0}]
+['slvqa_caption_ru', {'B-1': 0.0}]
+['slvqa_caption_ru', {'M': 0.0}]
+['slvqa_caption_ru', {'R': 0.0}]
+['slvqa_caption_ru', {'S': 0.0}]
+['slvqa_caption_ru', {'C': 0.0}]

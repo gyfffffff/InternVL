@@ -56,6 +56,7 @@ def format(args):
         data_item['id'] = i
         img_name = data['image']['path'].split('/')[-1].split('.')[0]
         data_item['image'] = f'{image_save_path}/{language}/{image_type}/{img_name}'
+        import pdb; pdb.set_trace()
         if os.path.exists(data_item['image']) == False:
             continue
         data_item['width'] = data['image']['resolution'][0]
@@ -68,6 +69,7 @@ def format(args):
             'prompt_sample_id': sample_id
         }
         try:
+            import pdb; pdb.set_trace()
             conversation_gpt = {
                 'from': 'gpt',
                 'value': caption_dict[img_name]

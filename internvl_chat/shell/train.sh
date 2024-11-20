@@ -36,4 +36,9 @@
 
 
 # 1119
-GPUS=2 PER_DEVICE_BATCH_SIZE=2 bash shell/internvl2.0/2nd_finetune/internvl2_8b_internlm2_7b_dynamic_res_2nd_finetune_lora_ru_caption_40k.sh
+# GPUS=2 PER_DEVICE_BATCH_SIZE=2 bash shell/internvl2.0/2nd_finetune/internvl2_8b_internlm2_7b_dynamic_res_2nd_finetune_lora_ru_caption_40k.sh
+
+
+# ar caption + image text pair
+unzip /mnt/workspace/gaoyufei/xyz_v2_data/ar/image_text_pair.zip -d /mnt/workspace/gaoyufei/xyz_v2_data/ar
+GPUS=2 PER_DEVICE_BATCH_SIZE=2 bash shell/internvl2.0/2nd_finetune/internvl2_8b_internlm2_7b_dynamic_res_2nd_finetune_lora_ar_100k_caption_pair.sh
