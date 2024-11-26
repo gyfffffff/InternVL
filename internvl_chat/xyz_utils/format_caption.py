@@ -50,14 +50,14 @@ def format(args):
         raw_data = [json.loads(line) for line in f.readlines()]
     data_num = 0
     for i, data in enumerate(raw_data):
-        if data_num > data_length:
+        if data_num >= data_length:
             break
         data_item = {}
         data_item['id'] = i
         img_name = data['image']['path'].split('/')[-1].split('.')[0]
         data_item['image'] = f'{image_save_path}/{language}/{image_type}/{img_name}'
-        import pdb; pdb.set_trace()
         if os.path.exists(data_item['image']) == False:
+            # print(f"Image {data_item['image']} not found")
             continue
         data_item['width'] = data['image']['resolution'][0]
         data_item['height'] = data['image']['resolution'][1]
@@ -69,12 +69,12 @@ def format(args):
             'prompt_sample_id': sample_id
         }
         try:
-            import pdb; pdb.set_trace()
             conversation_gpt = {
                 'from': 'gpt',
                 'value': caption_dict[img_name]
             }
         except:
+            # print(f"Caption for image {img_name} not found")
             continue
         conversations.append(conversation_human)
         conversations.append(conversation_gpt)

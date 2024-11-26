@@ -11,7 +11,7 @@ export MASTER_PORT=34229
 export TF_CPP_MIN_LOG_LEVEL=3
 export LAUNCHER=pytorch
 
-OUTPUT_DIR='work_dirs/internvl_chat_v2_0/internvl2_8b_internlm2_7b_dynamic_res_2nd_finetune_lora_ar_combine_160k'
+OUTPUT_DIR='work_dirs/internvl_chat_v2_0/internvl2_8b_internlm2_7b_dynamic_res_2nd_finetune_lora_ar_combine_170k_epoch2'
 
 if [ ! -d "$OUTPUT_DIR" ]; then
   mkdir -p "$OUTPUT_DIR"
@@ -29,10 +29,10 @@ torchrun \
   --nproc_per_node=${GPUS} \
   --master_port=${MASTER_PORT} \
   internvl/train/internvl_chat_finetune.py \
-  --model_name_or_path "pretrained/InternVL2-8B" \
+  --model_name_or_path "work_dirs/internvl_chat_v2_0/internvl2_8b_internlm2_7b_dynamic_res_2nd_finetune_lora_ar_combine_170k" \
   --conv_style "internlm2-chat" \
   --output_dir ${OUTPUT_DIR} \
-  --meta_path "./shell/data/xyz_ar_combine_160k.json" \
+  --meta_path "./shell/data/xyz_ar_combine_170k.json" \
   --overwrite_output_dir True \
   --force_image_size 448 \
   --max_dynamic_patch 6 \

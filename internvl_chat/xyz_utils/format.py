@@ -43,29 +43,23 @@ def format(args):
     prompt_randomseed = args.prompt_randomseed
     prompt_path = args.prompt_path
     save_path = args.save_path
-    image_safe_file = args.image_safe_file
-    version = args.version
     data_length = args.data_length
 
     image_save_path = args.image_save_path
 
     image_safe_set = set()
-    # with open(image_safe_file, 'r') as f:
-    #     image_safe_set = set([line.strip().split('/')[-1].split('.')[0] for line in f.readlines()])
     with open(image_jsonl, 'r') as f:
         raw_data = [json.loads(line) for line in f.readlines()]
 
     total_data = 0
-    images_we_have = set(os.listdir("/mnt/workspace/gaoyufei/xyz_v2_data/th/image_text_pair"))
     for i, data in enumerate(raw_data):
         data_item = {}
         data_item['id'] = i
         img_name = data['image']['path'].split('/')[-1].split('.')[0]
-        # if img_name not in image_safe_set:
-        #     continue
-        if total_data > data_length:
+        if total_data >= data_length:
             break
-        if img_name not in images_we_have:
+        if os.path.exists(f'{image_save_path}/{language}/{image_type}/{img_name}') == False:
+            print(f"Image {img_name} not found")
             continue
         img_format = data['image']['format'].lower()
         data_item['image'] = f'{image_save_path}/{language}/{image_type}/{img_name}'
@@ -100,8 +94,6 @@ if __name__ == "__main__":
     argparser.add_argument('--prompt_randomseed', type=int, default=2024)
     argparser.add_argument('--prompt_path', type=str)
     argparser.add_argument('--save_path', type=str)
-    argparser.add_argument('--image_safe_file', type=str)
-    argparser.add_argument('--version', type=str)
     argparser.add_argument('--image_save_path', type=str)
     argparser.add_argument('--data_length', type=int)
     args = argparser.parse_args()

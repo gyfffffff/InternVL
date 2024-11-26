@@ -33,3 +33,8 @@
 ['slvqa_caption_ru', {'R': 0.0}]
 ['slvqa_caption_ru', {'S': 0.0}]
 ['slvqa_caption_ru', {'C': 0.0}]
+['slvqa_ar_nlg', {'B-1': 0.027104878048780486}]
+['slvqa_ar_nlg', {'M': 0.0641170731707317}]
+['slvqa_ar_nlg', {'R': 0.02864878048780488}]
+['slvqa_ar_nlg', {'S': 0.0}]
+['slvqa_ar_nlg', {'C': 0.0}]

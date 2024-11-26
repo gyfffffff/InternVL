@@ -1,9 +1,0 @@
-{
-    "ar-combine-160k": {
-        "root": "/mnt/workspace/gaoyufei/xyz_v2_data/ar",
-        "annotation": "xyz_data/ar/preprocessed_combine_160k.jsonl",
-        "data_augment": false,
-        "repeat_time": 1,
-        "length": 160000
-    }
-}
