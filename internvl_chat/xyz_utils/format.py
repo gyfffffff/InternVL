@@ -58,8 +58,9 @@ def format(args):
         img_name = data['image']['path'].split('/')[-1].split('.')[0]
         if total_data >= data_length:
             break
+        # import pdb; pdb.set_trace()
         if os.path.exists(f'{image_save_path}/{language}/{image_type}/{img_name}') == False:
-            print(f"Image {img_name} not found")
+            # print(f"Image {img_name} not found")
             continue
         img_format = data['image']['format'].lower()
         data_item['image'] = f'{image_save_path}/{language}/{image_type}/{img_name}'

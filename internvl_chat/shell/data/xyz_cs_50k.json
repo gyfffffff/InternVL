@@ -1,9 +1,0 @@
-{
-    "cs-image-text-pair-v2": {
-        "root": "/mnt/workspace/gaoyufei/xyz_v2_data/cs/image_text_pair",
-        "annotation": "xyz_data/cs/preprocessed_newprompt_50000_image_release_v2_cs_image_text_pair_json_in_part-671b4e4002a4-000000.jsonl",
-        "data_augment": false,
-        "repeat_time": 1,
-        "length": 50001
-    }
-}

@@ -1,0 +1,9 @@
+{
+    "hu-caption_90k": {
+        "root": "/nas/shared/ADLab_Oasim/gaoyufei/xyz_v2_data/hu/image_pure/",
+        "annotation": "xyz_data/hu/hu_caption_90k.jsonl",
+        "data_augment": false,
+        "repeat_time": 1,
+        "length": 90000
+    }
+}

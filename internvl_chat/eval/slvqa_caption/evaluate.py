@@ -17,11 +17,11 @@ from tqdm import tqdm
 
 ds_collections = {
     'slvqa_caption_ar': {
-        'test': 'data/SLVQA/AR/ImgDesc/val.jsonl',
+        'test': 'data/SLVQA/AR/anns.jsonl',
         'metric': 'slvqa_gen_score',
     },
     'slvqa_caption_ru': {
-        'test': 'data/SLVQA/RU/ImgDesc/val.jsonl',
+        'test': 'data/SLVQA/RU/anns.jsonl',
         'metric': 'slvqa_gen_score',
     },    
 }

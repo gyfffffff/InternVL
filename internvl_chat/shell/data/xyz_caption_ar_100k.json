@@ -1,9 +1,0 @@
-{
-    "ar-image-text-pair-v2": {
-        "root": "/mnt/workspace/gaoyufei/xyz_v2_data/ar/image_pure/",
-        "annotation": "xyz_data/ar/ar_pure_caption_100k.jsonl",
-        "data_augment": false,
-        "repeat_time": 1,
-        "length": 100001
-    }
-}

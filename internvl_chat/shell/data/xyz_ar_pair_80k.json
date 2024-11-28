@@ -1,0 +1,9 @@
+{
+    "ar-pair-90k": {
+        "root": "/nas/shared/ADLab_Oasim/gaoyufei/xyz_v2_data/ar",
+        "annotation": "xyz_data/ar/ar_pair_90k.jsonl",
+        "data_augment": false,
+        "repeat_time": 1,
+        "length": 80000
+    }
+}

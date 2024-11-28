@@ -1,9 +1,0 @@
-{
-    "ar-image-text-pair-v2": {
-        "root": "/mnt/workspace/gaoyufei/xyz_v2_data/ru/image_pure/",
-        "annotation": "xyz_data/ru/ru_pure_caption_40k.jsonl",
-        "data_augment": false,
-        "repeat_time": 1,
-        "length": 28000
-    }
-}

@@ -171,3 +171,5 @@ data_process/
 
 */pretrained/*
 */xyz_data/*
+
+internvl_chat/data/
