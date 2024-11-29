@@ -8,6 +8,8 @@ from internvl.train.dataset import build_transform, dynamic_preprocess
 from PIL import Image
 from tqdm import tqdm
 
+import json
+
 
 def load_image(image_file, input_size=224):
     image = Image.open(image_file).convert('RGB')
@@ -63,24 +65,26 @@ if __name__ == '__main__':
     print(f'[test] use_thumbnail: {use_thumbnail}')
     print(f'[test] max_num: {args.max_num}')
 
-    output = f"xyz_caption_result/{args.language}"
-    os.makedirs(output, exist_ok=True)
+    output = f"xyz_caption_result/{args.language}/{args.language}_{checkpoint.replace('//', '_')}.jsonl"
+
     prompt = {"EN": 'Answer the question using a single word or phrase.',
     "AR": 'أجب على السؤال باستخدام كلمة واحدة أو عبارة واحدة.',
     "CS": 'Odpovězte na otázku pomocí jediného slova nebo fráze.',
     "SR": 'Одговорите на питање користећи једну реч или фразу.',
     "HU": 'Válaszoljon a kérdésre egyetlen szó vagy kifejezés használatával.',}
 
-    with open(os.path.join(args.root, language), 'r') as f:
+    with open(os.path.join(args.root, args.language, "anns.jsonl"), 'r') as f:
         lines = f.readlines()
+    # print(lines[:5])
     # {"image_id": "354_realworldqa_44.webp", "question": "أين يقع هذا السنجاب بالنسبة إلى النافذة؟  أ. السنجاب ليس قريبًا من النافذة.  ب. السنجاب قريب من النافذة ينظر إلى الداخل.  ج. السنجاب بعيد عن النافذة.  يرجى الإجابة مباشرة بحرف الخيار الصحيح فقط ولا شيء آخر.", "answer": "B"}
     for line in lines:
+        # print(line)
         content = json.loads(line)
         img, question, gt = content['image_id'], content['question'], content['answer']
-        question = question + ' ' + prompt[language]
-        img_path = os.path.join('./data/SLVQA/EN/images', filename, img)
+        question = question + ' ' + prompt[args.language]
+        img_path = os.path.join('./data/SLVQA/EN/images', img)
         assert os.path.exists(img_path), img_path
-        fout = open(os.path.join(output, img.split('.')[0]), 'w', encoding='utf-8')
+        
         pixel_values = load_image(img_path, image_size).cuda().to(torch.bfloat16)
         generation_config = dict(
             do_sample=args.sample,
@@ -98,6 +102,6 @@ if __name__ == '__main__':
             verbose=True
         )
         response = post_processing(response)
-        print(img, question, gt, response, sep='\t', file=fout)
-        fout.close()
+        with open(output, 'a+', encoding='utf-8') as f:
+            f.write('\t'.join([img, question, gt, response]) + '\n')
 

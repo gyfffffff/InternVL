@@ -1,0 +1,54 @@
+mme_color
+	TP: 20
+	FN: 0
+	TN: 0
+	FP: 0
+	precision: 1.0
+	recall: 1.0
+	other_num: 0.6666666666666666
+	acc: 0.3333333333333333
+mme_count
+	TP: 13
+	FN: 0
+	TN: 0
+	FP: 1
+	precision: 0.9285714285714286
+	recall: 1.0
+	other_num: 0.7666666666666667
+	acc: 0.21666666666666667
+mme_existence
+	TP: 14
+	FN: 0
+	TN: 0
+	FP: 1
+	precision: 0.9333333333333333
+	recall: 1.0
+	other_num: 0.75
+	acc: 0.23333333333333334
+mme_position
+	TP: 30
+	FN: 0
+	TN: 0
+	FP: 6
+	precision: 0.8333333333333334
+	recall: 1.0
+	other_num: 0.4
+	acc: 0.5
+mme
+	TP: 61
+	FN: 0
+	TN: 0
+	FP: 3
+	precision: 0.953125
+	recall: 1.0
+	other_num: 0.84
+	acc: 0.1525
+realworldqa
+	TP: 9
+	FN: 0
+	TN: 5
+	FP: 9
+	precision: 0.5
+	recall: 1.0
+	other_num: 0.9616666666666667
+	acc: 0.023333333333333334
