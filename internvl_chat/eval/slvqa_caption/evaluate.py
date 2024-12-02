@@ -17,11 +17,11 @@ from tqdm import tqdm
 
 ds_collections = {
     'slvqa_caption_ar': {
-        'test': 'data/SLVQA/AR/anns.jsonl',
+        'test': 'data/SLVQA/AR/NLG/caption_test.jsonl',
         'metric': 'slvqa_gen_score',
     },
-    'slvqa_caption_ru': {
-        'test': 'data/SLVQA/RU/anns.jsonl',
+    'slvqa_caption_hu': {
+        'test': 'data/SLVQA/HU/NLG/caption_test.jsonl',
         'metric': 'slvqa_gen_score',
     },    
 }
@@ -65,6 +65,7 @@ class VQADataset(torch.utils.data.Dataset):
         with open(ds_collections[dataset_name]['test'], 'r', encoding="utf-8") as f:
             for line in f:
                 self.data.append(json.loads(line))
+        self.data = self.data[:10]
 
     def __len__(self):
         return len(self.data)
@@ -74,7 +75,7 @@ class VQADataset(torch.utils.data.Dataset):
         question_id = data['image']
         question = data['question']
         annotation = data.get('caption', None)
-        root_dir = "/mnt/workspace/gaoyufei/InternVL/internvl_chat/data/SLVQA/CAPTION/caption_imgs"
+        root_dir = f"/mnt/workspace/gaoyufei/InternVL/internvl_chat/data/SLVQA/{args.language}/images"
         image = os.path.join(root_dir, data['image'])
         image = Image.open(image).convert('RGB')
         if self.dynamic_image_size:
@@ -225,7 +226,7 @@ if __name__ == "__main__":
     parser.add_argument('--num-workers', type=int, default=1)
     parser.add_argument('--num-beams', type=int, default=5)
     parser.add_argument('--temperature', type=float, default=0.0)
-    parser.add_argument('--out-dir', type=str, default='xyz_results')
+    parser.add_argument('--out-dir', type=str, default='xyz_caption_results')
     parser.add_argument('--few-shot', type=int, default=0)
     parser.add_argument('--seed', type=int, default=0)
     parser.add_argument('--dynamic', action='store_true')
@@ -233,10 +234,10 @@ if __name__ == "__main__":
     parser.add_argument('--load-in-8bit', action='store_true')
     parser.add_argument('--load-in-4bit', action='store_true')
     parser.add_argument('--auto', action='store_true')
+    parser.add_argument('--language', type=str)
     args = parser.parse_args() 
 
-    args.datasets = args.datasets.split(',')
-    print('datasets:', args.datasets)
+    args.datasets = ["slvqa_caption_" + args.language.lower()]
     assert args.batch_size == 1, 'Only batch size 1 is supported'
 
     torch.distributed.init_process_group(

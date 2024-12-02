@@ -103,5 +103,5 @@ if __name__ == '__main__':
         )
         response = post_processing(response)
         with open(output, 'a+', encoding='utf-8') as f:
-            f.write('\t'.join([img, question, gt, response]) + '\n')
+            f.write(json.dumps({"image_id": img, "question": question, "answer": response, "annotation": gt}, ensure_ascii=False) + '\n')
 
