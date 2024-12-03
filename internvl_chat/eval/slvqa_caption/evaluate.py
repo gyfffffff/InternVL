@@ -14,6 +14,7 @@ from internvl.train.dataset import build_transform, dynamic_preprocess
 from PIL import Image
 from slvqa_evaluator import SLVQANLGEvaluator
 from tqdm import tqdm
+import datetime
 
 ds_collections = {
     'slvqa_caption_ar': {
@@ -65,7 +66,7 @@ class VQADataset(torch.utils.data.Dataset):
         with open(ds_collections[dataset_name]['test'], 'r', encoding="utf-8") as f:
             for line in f:
                 self.data.append(json.loads(line))
-        self.data = self.data[:10]
+        self.data = self.data[:100]
 
     def __len__(self):
         return len(self.data)
@@ -74,7 +75,7 @@ class VQADataset(torch.utils.data.Dataset):
         data = self.data[idx]
         question_id = data['image']
         question = data['question']
-        annotation = data.get('caption', None)
+        annotation = data.get('answer', None)
         root_dir = f"/mnt/workspace/gaoyufei/InternVL/internvl_chat/data/SLVQA/{args.language}/images"
         image = os.path.join(root_dir, data['image'])
         image = Image.open(image).convert('RGB')
@@ -244,6 +245,7 @@ if __name__ == "__main__":
         backend='nccl',
         world_size=int(os.getenv('WORLD_SIZE', '1')),
         rank=int(os.getenv('RANK', '0')),
+        timeout=datetime.timedelta(seconds=180000)
     )
 
     torch.cuda.set_device(int(os.getenv('LOCAL_RANK', 0)))

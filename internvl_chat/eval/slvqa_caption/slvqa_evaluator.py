@@ -246,7 +246,7 @@ class SLVQANLGEvaluator:
         return unique_answer_scores       
 
         
-    def compute_score(self, pred_list, gt_list):
+    def compute_score(self, pred_answer, gt_answer):
         from aac_metrics import evaluate
         corpus_scores, _ = evaluate([pred_answer, pred_answer], [[gt_answer], [gt_answer]])
         return corpus_scores
@@ -267,13 +267,15 @@ class SLVQANLGEvaluator:
             pred_answer = self.answer_processor(entry["answer"])
             gt_answer = entry['annotation']
             question_id = entry['question_id']
-            scores = self.compute_score(pred_answer, gt_answer)
-            for k, v in scores.items():
-                scores[k][question_id] = v
-
+            computed_scores = self.compute_score(pred_answer, gt_answer)
+            print(computed_scores)
+            for k, v in computed_scores.items():
+                scores[k] = scores.get(k, [])
+                scores[k].append(v)
+        print(275, scores)
         average_scores = {}
         for metric in scores.keys():
-            average_scores[metric] = sum(scores[metric].values()) / len(scores[metric])
+            average_scores[metric] = sum(scores[metric]) / len(scores[metric])
 
         return average_scores, scores
 
