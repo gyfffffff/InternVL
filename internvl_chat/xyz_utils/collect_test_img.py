@@ -17,8 +17,8 @@ question = {
 }
 
 if __name__ == "__main__":
-    language = "hu"
-    training_data_path = f"xyz_data/{language}/{language}_caption_90k.jsonl"
+    language = "ru"
+    training_data_path = f"xyz_data/{language}/{language}_caption_40k.jsonl"
     all_img_path = f"/nas/shared/ADLab_Oasim/gaoyufei/xyz_v2_data/{language}/image_pure" 
     ouput_jsonl_path = f"data/SLVQA/{language.upper()}/NLG/caption_test.jsonl"
     trans_file = f"xyz_data/{language}/trans_{language}.json"

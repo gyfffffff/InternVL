@@ -17,7 +17,7 @@ def merge_json_files(input_folder, output_file):
     with open(output_file, 'w', encoding='utf-8') as file:
         json.dump(merged_data, file, ensure_ascii=False, indent=4)
 
-input_folder = '/nas/shared/ADLab_Oasim/gaoyufei/InternVL/internvl_chat/xyz_data/hu'  # 替换为你的JSON文件所在的文件夹路径
-output_file = '/nas/shared/ADLab_Oasim/gaoyufei/InternVL/internvl_chat/xyz_data/hu/trans_hu.json'  # 合并后的JSON文件名
+input_folder = '/nas/shared/ADLab_Oasim/gaoyufei/InternVL/internvl_chat/xyz_data/ko'  # 替换为你的JSON文件所在的文件夹路径
+output_file = '/nas/shared/ADLab_Oasim/gaoyufei/InternVL/internvl_chat/xyz_data/ko/trans_ko.json'  # 合并后的JSON文件名
 
 merge_json_files(input_folder, output_file)

@@ -207,12 +207,20 @@ class EvalAIAnswerProcessor:
                 out_text[word_id] = self.CONTRACTIONS[word]
         out_text = ' '.join(out_text)
         return out_text
+    
+    def trucate(self, item):
+        max_len = 1300
+        print(213, len(item))
+        if len(item) > max_len:
+            item = item[:max_len]
+        return item
 
     def __call__(self, item):
         item = self.word_tokenize(item)
         item = item.replace('\n', ' ').replace('\t', ' ').strip()
         item = self.process_punctuation(item)
         item = self.process_digit_article(item)
+        item = self.trucate(item)
         return item
 
 
@@ -266,6 +274,8 @@ class SLVQANLGEvaluator:
         for entry in tqdm(pred_list):
             pred_answer = self.answer_processor(entry["answer"])
             gt_answer = entry['annotation']
+            if len(gt_answer) > 1300:
+                gt_answer = gt_answer[:1300]
             question_id = entry['question_id']
             computed_scores = self.compute_score(pred_answer, gt_answer)
             print(computed_scores)

@@ -1,9 +1,9 @@
 import json
 
 if __name__ == "__main__":
-    lan="ko"
+    lan="ru"
     caption_json = f"/nas/shared/ADLab_Oasim/gaoyufei/InternVL/internvl_chat/xyz_data/{lan}/trans_{lan}.json"
-    outfile = f"/nas/shared/ADLab_Oasim/gaoyufei/InternVL/internvl_chat/xyz_data/{lan}/captioned_img3.txt"
+    outfile = f"/nas/shared/ADLab_Oasim/gaoyufei/InternVL/internvl_chat/xyz_data/{lan}/captioned_img.txt"
 
     with open(caption_json, "r") as f:
         captions = json.load(f)

@@ -25,6 +25,30 @@ ds_collections = {
         'test': 'data/SLVQA/HU/NLG/caption_test.jsonl',
         'metric': 'slvqa_gen_score',
     },    
+    'slvqa_caption_vi': {
+        'test': 'data/SLVQA/VI/NLG/caption_test.jsonl',
+        'metric': 'slvqa_gen_score',
+    },
+    'slvqa_caption_cs': {
+        'test': 'data/SLVQA/CS/NLG/caption_test.jsonl',
+        'metric': 'slvqa_gen_score',
+    },   
+    'slvqa_caption_ko': {
+        'test': 'data/SLVQA/KO/NLG/caption_test.jsonl',
+        'metric': 'slvqa_gen_score',
+    },
+    'slvqa_caption_th': {
+        'test': 'data/SLVQA/TH/NLG/caption_test.jsonl',
+        'metric': 'slvqa_gen_score',
+    },    
+    'slvqa_caption_ru': {
+        'test': 'data/SLVQA/RU/NLG/caption_test.jsonl',
+        'metric': 'slvqa_gen_score',
+    },
+    'slvqa_caption_sr': {
+        'test': 'data/SLVQA/SR/NLG/caption_test.jsonl',
+        'metric': 'slvqa_gen_score',
+    }
 }
 
 
@@ -197,26 +221,26 @@ def evaluate_chat_model():
             json.dump(merged_outputs, open(results_file, 'w', encoding='utf-8'), ensure_ascii=False, indent=4)
             print('Results saved to {}'.format(results_file))  
 
-            if ds_collections[ds_name]['metric'] == 'accuracy':
-                accuracy = evaluate_exact_match_accuracy(merged_outputs)
-                print(ds_name, {'accuracy': accuracy})
-                summaries.append([ds_name, {'accuracy': accuracy}])
-            elif ds_collections[ds_name]['metric'] == 'slvqa_gen_score':
-                evaluator = SLVQANLGEvaluator()
-                scores, total_scores = evaluator.eval_pred_list(merged_outputs)
-                print(total_scores)
-                for k, v in scores.items():
-                    print(ds_name, {k: v})
-                    summaries.append([ds_name, {k: v}])
+        #     if ds_collections[ds_name]['metric'] == 'accuracy':
+        #         accuracy = evaluate_exact_match_accuracy(merged_outputs)
+        #         print(ds_name, {'accuracy': accuracy})
+        #         summaries.append([ds_name, {'accuracy': accuracy}])
+        #     elif ds_collections[ds_name]['metric'] == 'slvqa_gen_score':
+        #         evaluator = SLVQANLGEvaluator()
+        #         scores, total_scores = evaluator.eval_pred_list(merged_outputs)
+        #         print(total_scores)
+        #         for k, v in scores.items():
+        #             print(ds_name, {k: v})
+        #             summaries.append([ds_name, {k: v}])
         torch.distributed.barrier() 
 
-    out_path = '_'.join(args.checkpoint.split('/')[-2:])
-    writer = open(os.path.join(args.out_dir, f'{out_path}.txt'), 'a')
-    print(f"write results to file {os.path.join(args.out_dir, f'{out_path}.txt')}")
-    for summary in summaries:
-        print(summary)
-        writer.write(f'{summary}\n')
-    writer.close()
+    # out_path = '_'.join(args.checkpoint.split('/')[-2:]) + "_"+args.language
+    # writer = open(os.path.join(args.out_dir, f'{out_path}.txt'), 'a')
+    # print(f"write results to file {os.path.join(args.out_dir, f'{out_path}.txt')}")
+    # for summary in summaries:
+    #     print(summary)
+    #     writer.write(f'{summary}\n')
+    # writer.close()
     
 
 if __name__ == "__main__":
