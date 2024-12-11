@@ -17,15 +17,20 @@ question = {
 }
 
 if __name__ == "__main__":
-    language = "ru"
-    training_data_path = f"xyz_data/{language}/{language}_caption_40k.jsonl"
+    language = "hu"
+    training_data_path = f"xyz_data/{language}/{language}_caption_90k.jsonl"
     all_img_path = f"/nas/shared/ADLab_Oasim/gaoyufei/xyz_v2_data/{language}/image_pure" 
     ouput_jsonl_path = f"data/SLVQA/{language.upper()}/NLG/caption_test.jsonl"
     trans_file = f"xyz_data/{language}/trans_{language}.json"
 
     with open(training_data_path, "r") as f:
-        data = f.readlines()
-        data = [json.loads(d) for d in data]
+        data_l = f.readlines()
+        data = []
+        for d in data_l:  
+            try:
+                data.append(json.loads(d))
+            except:
+                print(30, d)
         trained_img_set = set([d["image"].split('/')[-1] for d in data])
 
     img_we_have = set(os.listdir(all_img_path))

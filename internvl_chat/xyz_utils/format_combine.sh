@@ -1,15 +1,15 @@
 image_save_path="/nas/shared/ADLab_Oasim/gaoyufei/xyz_v2_data"
 
-language="th"
-save_path="xyz_data/${language}/${language}_caption_90k.jsonl"
-python xyz_utils/format_caption.py \
-    --prompt_path xyz_utils/prompt_for_caption.json \
-    --language ${language} \
-    --caption_json xyz_data/${language}/trans_${language}.json \
-    --image_jsonl xyz_data/th/image_release_v2_th_image_pure_json_in_part-671b228af112-000000.jsonl \
-    --image_save_path ${image_save_path} \
-    --save_path  ${save_path}\
-    --data_length 90000
+# language="th"
+# save_path="xyz_data/${language}/${language}_caption_90k.jsonl"
+# python xyz_utils/format_caption.py \
+#     --prompt_path xyz_utils/prompt_for_caption.json \
+#     --language ${language} \
+#     --caption_json xyz_data/${language}/trans_${language}.json \
+#     --image_jsonl xyz_data/th/image_release_v2_th_image_pure_json_in_part-671b228af112-000000.jsonl \
+#     --image_save_path ${image_save_path} \
+#     --save_path  ${save_path}\
+#     --data_length 90000
 
 # save_path="xyz_data/${language}/${language}_pair_90k.jsonl"
 # jsonl_name="image_release_v2_th_image_text_pair_json_in_part-671b2319346b-000000.jsonl"
@@ -21,16 +21,16 @@ python xyz_utils/format_caption.py \
 #     --image_save_path ${image_save_path} \
 #     --data_length 90000
 
-language="vi"
-save_path="xyz_data/${language}/${language}_caption_90k.jsonl"
-python xyz_utils/format_caption.py \
-    --prompt_path xyz_utils/prompt_for_caption.json \
-    --language ${language} \
-    --caption_json xyz_data/${language}/trans_${language}.json \
-    --image_jsonl xyz_data/vi/image_release_v2_vi_image_pure_json_in_part-671a151ef417-000000.jsonl \
-    --image_save_path ${image_save_path} \
-    --save_path  ${save_path}\
-    --data_length 90000
+# language="vi"
+# save_path="xyz_data/${language}/${language}_caption_90k.jsonl"
+# python xyz_utils/format_caption.py \
+#     --prompt_path xyz_utils/prompt_for_caption.json \
+#     --language ${language} \
+#     --caption_json xyz_data/${language}/trans_${language}.json \
+#     --image_jsonl xyz_data/vi/image_release_v2_vi_image_pure_json_in_part-671a151ef417-000000.jsonl \
+#     --image_save_path ${image_save_path} \
+#     --save_path  ${save_path}\
+#     --data_length 90000
 
 # save_path="xyz_data/${language}/${language}_pair_90k.jsonl"
 # jsonl_name=""
@@ -42,16 +42,16 @@ python xyz_utils/format_caption.py \
 #     --image_save_path ${image_save_path} \
 #     --data_length 90000
 
-language="ko"
-save_path="xyz_data/${language}/${language}_caption_90k.jsonl"
-python xyz_utils/format_caption.py \
-    --prompt_path xyz_utils/prompt_for_caption.json \
-    --language ${language} \
-    --caption_json xyz_data/${language}/trans_${language}.json \
-    --image_jsonl xyz_data/ko/image_release_v2_ko_image_pure_json_in_part-671b1a0159e6-000000.jsonl \
-    --image_save_path ${image_save_path} \
-    --save_path  ${save_path}\
-    --data_length 90000
+# language="ko"
+# save_path="xyz_data/${language}/${language}_caption_90k.jsonl"
+# python xyz_utils/format_caption.py \
+#     --prompt_path xyz_utils/prompt_for_caption.json \
+#     --language ${language} \
+#     --caption_json xyz_data/${language}/trans_${language}.json \
+#     --image_jsonl xyz_data/ko/image_release_v2_ko_image_pure_json_in_part-671b1a0159e6-000000.jsonl \
+#     --image_save_path ${image_save_path} \
+#     --save_path  ${save_path}\
+#     --data_length 90000
 
 # save_path="xyz_data/${language}/${language}_pair_90k.jsonl"
 # jsonl_name=""
@@ -84,16 +84,16 @@ python xyz_utils/format_caption.py \
 #     --image_save_path ${image_save_path} \
 #     --data_length 90000
 
-# language="hu"
-# save_path="xyz_data/${language}/${language}_caption_90k.jsonl"
-# python xyz_utils/format_caption.py \
-#     --prompt_path xyz_utils/prompt_for_caption.json \
-#     --language ${language} \
-#     --caption_json xyz_data/${language}/trans_${language}.json \
-#     --image_jsonl xyz_data/hu/image_release_v2_hu_image_pure_json_in_part-671a14965531-000000.jsonl \
-#     --image_save_path ${image_save_path} \
-#     --save_path  ${save_path}\
-#     --data_length 90000
+language="hu"
+save_path="xyz_data/${language}/${language}_caption_90k.jsonl"
+python xyz_utils/format_caption.py \
+    --prompt_path xyz_utils/prompt_for_caption.json \
+    --language ${language} \
+    --caption_json xyz_data/${language}/trans_${language}.json \
+    --image_jsonl xyz_data/hu/image_release_v2_hu_image_pure_json_in_part-671a14965531-000000.jsonl \
+    --image_save_path ${image_save_path} \
+    --save_path  ${save_path}\
+    --data_length 90000
 
 # save_path="xyz_data/${language}/${language}_pair_90k.jsonl"
 # jsonl_name="image_release_v2_hu_image_text_pair_json_in_part-671a1822a82d-000000.jsonl"
