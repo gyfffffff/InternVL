@@ -82,11 +82,12 @@ class calculate_metrics:
         return metric_dict
 
     def process_result(self, results_dir):
-
+        result_file = os.path.join(results_dir, "result.txt")
+        rf = open(result_file, 'a+')
         model_score_dict = dict()
         for eval_type, task_name_list in eval_type_dict.items():
             print('===========', eval_type, '===========')
-
+            rf.write(f'=========== {eval_type} ===========\n')
             scores = 0
             task_score_dict = dict()
 
@@ -147,10 +148,13 @@ class calculate_metrics:
                 scores += task_score
 
             print('total score:', scores, '\n')
+            rf.write(f'total score: {scores} \n\n')
             for task_name, score in task_score_dict.items():
                 print('\t', task_name, ' score:', score)
+                rf.write(f'\t {task_name} score: {score} \n')
             print('\n')
-
+            rf.write('\n\n')
+        rf.close()
         return
 
 
