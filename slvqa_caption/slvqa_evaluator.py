@@ -230,30 +230,7 @@ class SLVQANLGEvaluator:
     def __init__(self):
         self.answer_processor = EvalAIAnswerProcessor()
 
-    def _compute_answer_scores(self, answers):
-        """
-        compute the accuracy (soft score) of human answers
-        """
-        answers = [self.answer_processor(a) for a in raw_answers]
-        assert len(answers) == 10
-        gt_answers = list(enumerate(answers))
-        unique_answers = set(answers)
-        unique_answer_scores = {}
-
-        for unique_answer in unique_answers:
-            accs = []
-            for gt_answer in gt_answers:
-                other_answers = [item for item in gt_answers if item != gt_answer]
-                matching_answers = [
-                    item for item in other_answers if item[1] == unique_answer
-                ]
-                acc = min(1, float(len(matching_answers)) / 3)
-                accs.append(acc)
-            unique_answer_scores[unique_answer] = sum(accs) / len(accs)
-
-        return unique_answer_scores       
-
-        
+      
     def compute_score(self, pred_answer, gt_answer):
         from aac_metrics import evaluate
         corpus_scores, _ = evaluate([pred_answer, pred_answer], [[gt_answer], [gt_answer]])
@@ -277,15 +254,11 @@ class SLVQANLGEvaluator:
             if len(gt_answer) > 1300:
                 gt_answer = gt_answer[:1300]
             question_id = entry['question_id']
-            try:
-                computed_scores = self.compute_score(pred_answer, gt_answer)
-                print(computed_scores)
-                for k, v in computed_scores.items():
-                    scores[k] = scores.get(k, [])
-                    scores[k].append(v)
-            except Exception as e:
-                print(e)
-                pass
+            computed_scores = self.compute_score(pred_answer, gt_answer)
+            print(computed_scores)
+            for k, v in computed_scores.items():
+                scores[k] = scores.get(k, [])
+                scores[k].append(v)
         print(275, scores)
         average_scores = {}
         for metric in scores.keys():

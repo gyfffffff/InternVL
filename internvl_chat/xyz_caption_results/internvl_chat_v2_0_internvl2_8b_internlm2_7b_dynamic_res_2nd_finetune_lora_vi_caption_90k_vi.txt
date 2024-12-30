@@ -7,3 +7,15 @@
 ['slvqa_caption_vi', {'cider_d': tensor(0., dtype=torch.float64)}]
 ['slvqa_caption_vi', {'spice': tensor(0.0139, dtype=torch.float64)}]
 ['slvqa_caption_vi', {'spider': tensor(0.0070, dtype=torch.float64)}]
+
+
+compare with gpt-4o:
+['gpt4o_caption_vi', {'bleu_1': tensor(0.1902, dtype=torch.float64)}]
+['gpt4o_caption_vi', {'bleu_2': tensor(0.1189, dtype=torch.float64)}]
+['gpt4o_caption_vi', {'bleu_3': tensor(0.0739, dtype=torch.float64)}]
+['gpt4o_caption_vi', {'bleu_4': tensor(0.0448, dtype=torch.float64)}]
+['gpt4o_caption_vi', {'meteor': tensor(0.2900, dtype=torch.float64)}]
+['gpt4o_caption_vi', {'rouge_l': tensor(0.1910, dtype=torch.float64)}]
+['gpt4o_caption_vi', {'cider_d': tensor(0., dtype=torch.float64)}]
+['gpt4o_caption_vi', {'spice': tensor(0.0036, dtype=torch.float64)}]
+['gpt4o_caption_vi', {'spider': tensor(0.0018, dtype=torch.float64)}]

@@ -7,3 +7,6 @@
 ['slvqa_caption_ar', {'cider_d': tensor(0., dtype=torch.float64)}]
 ['slvqa_caption_ar', {'spice': tensor(0.0040, dtype=torch.float64)}]
 ['slvqa_caption_ar', {'spider': tensor(0.0020, dtype=torch.float64)}]
+
+
+compare with gpt-4o:

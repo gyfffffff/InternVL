@@ -20,10 +20,10 @@ if __name__ == '__main__':
     parser.add_argument('--language', type=str)
     parser.add_argument('--checkpoint', type=str)
     parser.add_argument('--results_file', type=str)
-    parser.add_argument('--out-dir', type=str, default='xyz_caption_results')
+    parser.add_argument('--out-dir', type=str, default='xyz_caption_results/')
     args = parser.parse_args() 
 
-    ds_name = f'gpt4o_caption_{args.language}'
+    ds_name = f'slvqa_caption_{args.language}'
 
     with open(args.results_file, 'r') as f:
         merged_outputs = json.load(f)

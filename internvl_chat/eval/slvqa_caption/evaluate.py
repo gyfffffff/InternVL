@@ -48,6 +48,38 @@ ds_collections = {
     'slvqa_caption_sr': {
         'test': 'data/SLVQA/SR/NLG/caption_test.jsonl',
         'metric': 'slvqa_gen_score',
+    },
+    'gpt4o_caption_ar': {
+        'test': 'data/SLVQA/AR/NLG/gpt4o_caption_test.jsonl',
+        'metric': 'slvqa_gen_score',
+    },
+    'gpt4o_caption_hu': {
+        'test': 'data/SLVQA/HU/NLG/gpt4o_caption_test.jsonl',
+        'metric': 'slvqa_gen_score',
+    },    
+    'gpt4o_caption_vi': {
+        'test': 'data/SLVQA/VI/NLG/gpt4o_caption_test.jsonl',
+        'metric': 'slvqa_gen_score',
+    },
+    'gpt4o_caption_cs': {
+        'test': 'data/SLVQA/CS/NLG/gpt4o_caption_test.jsonl',
+        'metric': 'slvqa_gen_score',
+    },   
+    'gpt4o_caption_ko': {
+        'test': 'data/SLVQA/KO/NLG/gpt4o_caption_test.jsonl',
+        'metric': 'slvqa_gen_score',
+    },
+    'gpt4o_caption_th': {
+        'test': 'data/SLVQA/TH/NLG/gpt4o_caption_test.jsonl',
+        'metric': 'slvqa_gen_score',
+    },    
+    'gpt4o_caption_ru': {
+        'test': 'data/SLVQA/RU/NLG/gpt4o_caption_test.jsonl',
+        'metric': 'slvqa_gen_score',
+    },
+    'gpt4o_caption_sr': {
+        'test': 'data/SLVQA/SR/NLG/gpt4o_caption_test.jsonl',
+        'metric': 'slvqa_gen_score',
     }
 }
 
@@ -262,7 +294,7 @@ if __name__ == "__main__":
     parser.add_argument('--language', type=str)
     args = parser.parse_args() 
 
-    args.datasets = ["slvqa_caption_" + args.language.lower()]
+    args.datasets = ["gpt4o_caption_" + args.language.lower()]
     assert args.batch_size == 1, 'Only batch size 1 is supported'
 
     torch.distributed.init_process_group(
